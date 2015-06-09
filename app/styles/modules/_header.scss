@@ -1,0 +1,15 @@
+.header {
+	@include linear-gradient(to top, $bg-light-yellow, $bg-middle-blue);
+	@extend .padding;
+	@extend .section-default;
+	& > div {
+		@extend .inline-block-vcenter;
+	}
+}
+
+.info {
+	margin-left: 100px;
+  	@extend .padding-left;
+  	border-left: 1px dashed $middle-blue;
+    @include e('title') {}
+}

@@ -1,0 +1,16 @@
+.page {
+	@extend .vertical-padding;
+	@include m('left-aside') {
+		.sidebar,
+		.content {
+			@extend .inline-block-vtop;
+		}
+		.sidebar {
+			width: 300px;
+		}
+		.content {
+			@extend .margin-left;
+			width: 660px;
+		}
+	}
+}

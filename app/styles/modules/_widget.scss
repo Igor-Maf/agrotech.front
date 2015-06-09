@@ -1,0 +1,20 @@
+.widget {
+	@extend .padding;
+	@extend .section-default;
+
+	@include e('title') {
+		border-bottom: 1px dashed $light-blue;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+	}
+
+	@include e('list') { }
+
+	@include e('item') {
+		  margin-bottom: .5em;
+	}
+}
+
+.widget:not(:first-child) {
+	margin-top: 1em;
+}
