@@ -1,15 +1,17 @@
 // bower:scss
 // endbower
 
+@import "mixins";
+
+
 /* core */
-@import "core/mixins";
-@import "core/config";
 @import "core/pallete";
 @import "core/extends";
 
 
 /* modules */
 @import "modules/header";
+@import "modules/footer";
 @import "modules/sidebar";
 @import "modules/widget";
 
@@ -18,12 +20,28 @@
 @import "layouts/left-aside";
 
 
+/* include fonts */
+@include font-face('HelveticaNeueCyr Medium', 'HelveticaNeueCyrMedium', 'HelveticaNeueCyr');
+@include font-face('HelveticaNeueCyr Roman', 'HelveticaNeueCyrRoman', 'HelveticaNeueCyr');
+@include font-face('HelveticaNeueCyr Thin', 'HelveticaNeueCyrThin', 'HelveticaNeueCyr');
+@include font-face('HelveticaNeueCyr Bold', 'HelveticaNeueCyrBold', 'HelveticaNeueCyr');
+
+
+
 /* ==============================================
                    DOM ELEMENTS
  ============================================== */
+html {
+    height: 100%;
+    font-size: 15px;
+}
 body {
+    min-height: 100%;
+    min-width: 1020px;
     font: 15px/1.5em 'HelveticaNeueCyr Roman', Helvetica, sans-serif;
     color: $clr-dark;
+    background: url(/images/bg.jpg) no-repeat;
+    background-size: cover;
 }
 img {
     max-width: 100%;
@@ -39,11 +57,11 @@ a:focus {
 }
 
 strong {
-    font-family: 'HelveticaNeueCyr Bold';
+    font-family: 'HelveticaNeueCyr Bold', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'HelveticaNeueCyr Bold';
+    font-family: 'HelveticaNeueCyr Bold', sans-serif;
     line-height: 1.5em;
 }
 h1 {
@@ -74,5 +92,8 @@ hr {
  ============================================== */
 .container {
     width: 980px;
-    margin: 1rem auto;
+    margin: 0 auto;
+    overflow: hidden;
+    @extend .horizontal-padding;
+    background: rgba(255, 255, 255, .7);
 }

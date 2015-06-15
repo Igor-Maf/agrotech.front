@@ -1,5 +1,9 @@
 .header {
-	@include linear-gradient(to top, $bg-light-yellow, $bg-middle-blue);
+	// @include linear-gradient(to top, $bg-light-yellow, $bg-middle-blue);
+	// background: url(/images/bg.jpg) no-repeat;
+	// background-size: cover;
+	
+	@extend .margin-top;
 	@extend .padding;
 	@extend .section-default;
 	& > div {
@@ -10,6 +14,13 @@
 .info {
 	margin-left: 100px;
   	@extend .padding-left;
+  	// color: #efefe1;
   	border-left: 1px dashed $middle-blue;
-    @include e('title') {}
+    // @include e('link') {
+    // 	color: $middle-blue;
+    // 	&:hover,
+    // 	&:focus {
+    // 		color: #efefe1;
+    // 	}
+    // }
 }

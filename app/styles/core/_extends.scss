@@ -19,13 +19,13 @@
                     PADDINGS
  ============================================== */
 .padding {
-	padding: 1em 20px;
+	padding: 1rem 20px;
 }
 .horizontal-padding {
 	padding: 0 20px;
 }
 .vertical-padding {
-	padding: 1em 0;
+	padding: 1rem 0;
 }
 .padding-left {
 	padding-left: 20px;
@@ -37,10 +37,24 @@
 .margin-left {
 	margin-left: 20px;
 }
+.margin-vertical {
+	margin: 1rem 0;
+}
+.margin-top {
+	margin-top: 1rem;
+}
+.margin-bottom {
+	margin-bottom: 1rem;
+}
 
+
+.section-simple {
+	background: #fff;
+	border: 1px solid $light-blue;
+	border-radius: 10px;
+}
 
 .section-default {
-	border: 1px solid $light-blue;
-	border-bottom: 3px solid #D0E0E5;
-	border-radius: 10px;
+	@extend .section-simple;
+	border-bottom: 3px solid $middle-blue;
 }

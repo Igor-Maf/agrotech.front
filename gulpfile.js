@@ -2,9 +2,11 @@
 'use strict';
 // generated on 2015-06-09 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
+
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var urlAdjuster = require('gulp-css-url-adjuster');
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -19,6 +21,9 @@ gulp.task('styles', function () {
       require('autoprefixer-core')({browsers: ['last 1 version']})
     ]))
     .pipe($.sourcemaps.write())
+    .pipe(urlAdjuster({
+      replace:  ['/images/','../images/'],
+    }))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
