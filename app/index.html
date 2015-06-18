@@ -105,13 +105,14 @@
 
                         <fieldset class="contact-form__row">
                             <label for="phone">Телефон<span class="required"></span></label>
-                            <input type="phone" id="phone" name="phone" required />
+                            <input type="phone" id="phone" name="phone" placeholder="093-123-4567" required pattern="^\d{3}-\d{3}-\d{4}$"/>
                         </fieldset>
 
                          <fieldset class="contact-form__row">
                             <label for="message">Сообщение<span class="required"></span></label>
                             <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         </fieldset>
+                        <button type="submit">Отправить сообщение</button>
                     </form>
                 </div>
             </aside>
@@ -127,6 +128,44 @@
                 <section class="content__grid">
                     <h2>Каталог товаров</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi animi dolorum quae, alias facilis accusamus nobis. Nihil voluptas ipsum maiores deleniti consectetur sit necessitatibus similique sequi nam minima? Illo, assumenda?</p>
+                    <div class="grid--catalog">
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img01.JPG" alt="фермер"></div>
+                            <p>Крупоцеха - крупорушки Феремер</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img02.png" alt="фермер"></div>
+                            <p>Вертикальные комбикормовые установки КУВ-0.5,1.0,1.5</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img03.JPG" alt="фермер"></div>
+                            <p>Дробилка-крупорушка ДК-7,5</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img04.JPG" alt="фермер"></div>
+                            <p>Кукурузолущилки Молотилки кукурузных початков</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img05.JPG" alt="фермер"></div>
+                            <p>Горизонтальные комбикормовые установки KУГ-1 KУГ-1.5 КУГ-2.0</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img06.JPG" alt="фермер"></div>
+                            <p>Универсальный пневмодробилки УПД</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img07.JPG" alt="фермер"></div>
+                            <p>Семенорушки-шелушители центробежные: СЦ-1,0; СЦ-2,0</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img08.png" alt="фермер"></div>
+                            <p>Грече-просо-рушка. Производство гречневой крупы и пшена</p>
+                        </a>
+                        <a href="#" class="content__section">
+                            <div class="content__img"><img src="./images/catalog_img09.JPG" alt="фермер"></div>
+                            <p>Соломорезки С-11, С-15 Измельчители сена и соломы</p>
+                        </a>
+                    </div>
                 </section>
             </section>
 

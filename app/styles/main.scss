@@ -14,6 +14,7 @@
 @import "modules/footer";
 @import "modules/sidebar";
 @import "modules/widget";
+@import "modules/grid";
 
 
 /* layouts */
@@ -86,6 +87,20 @@ hr {
     height: 1px;
     margin: .7em 0;
 }
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid $light-blue;
+    box-sizing: border-box;
+    color: #222;
+    padding: 3px 10px;
+    width: 100%;
+}
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 8px 0px $middle-blue;   
+    outline: none;
+}
 
 /* ==============================================
                     UNIQUES
@@ -96,4 +111,14 @@ hr {
     overflow: hidden;
     @extend .horizontal-padding;
     background: rgba(255, 255, 255, .7);
+}
+.contact-form button {
+   @extend textarea;
+    background-color: $middle-blue;
+    color: #fff;
+    font-size: 1.2em;
+}
+.contact-form button:focus {
+    background-color: #fff;
+    color: $middle-blue;
 }
