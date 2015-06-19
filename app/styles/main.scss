@@ -122,3 +122,72 @@ textarea:focus {
     background-color: #fff;
     color: $middle-blue;
 }
+
+
+.slider {
+    @extend .section-default;
+    background-color: #fff;
+    height: 210px;
+    position: relative;
+    text-align: center;
+    // height: 490px;
+}
+.slider__content {
+    border-radius: 5px;
+    border: 1px solid $light-blue;
+    margin: 20px;
+    padding: 10px;
+}
+.slider__wrapper {
+    position: absolute;
+}
+.slider__swither {
+    bottom: 0;
+    height: 185px;
+    left: 20px;
+    overflow: hidden;
+    position: absolute;
+    width: 620px;
+}
+#slider__nav {
+    bottom: 0;
+    position: absolute;
+}
+.swither__item {
+    background-color: #fff;
+    box-sizing: border-box;
+    float: left;
+    height: 150px;
+    padding: 0px 15px;
+    width: 150px;
+ }
+.swither__item img {
+    height: 80%;
+    // opacity: 0.5;
+    // padding-top: 20px;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+.swither__item p {
+    line-height: 1em;
+    font-size: .8em;
+}
+// .swither__item.active img,
+// .swither__item img:hover {
+//     height: 90%;
+//     opacity: 1;
+//     padding: 0;
+//     transition-duration: .2s
+// }
+.item {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+.item__img {
+    width: 35%;
+    padding: 10px;
+}
+.content__item {
+    display: none;
+}

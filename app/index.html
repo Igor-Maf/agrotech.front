@@ -105,7 +105,7 @@
 
                         <fieldset class="contact-form__row">
                             <label for="phone">Телефон<span class="required"></span></label>
-                            <input type="phone" id="phone" name="phone" placeholder="093-123-4567" required pattern="^\d{3}-\d{3}-\d{4}$"/>
+                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
                         </fieldset>
 
                          <fieldset class="contact-form__row">
@@ -124,7 +124,129 @@
                     <h1>ПромСельПроект ПКБ</h1>
                     <p>Проектно-конструкторское бюро "ПромСельПроект" Изготавливает сельскохозяйственные машины, оборудование по переработке с/х продукции, технологическое проектирование и комплектация оборудованием пищевых производств... <a href="#" class="read-more">читать далее</a></p>
                 </section>
-                
+                <section>
+                 <h2>Популярные товары</h2>
+                    <div class="slider">
+                   
+                        <!-- <div class="slider__content">
+                            <div class="content__item content__item--1">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img01.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--2">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img02.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--3">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img03.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--4">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img04.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--5">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img05.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--6">
+                                <div class="item item__img">
+                                    <img src="./images/catalog_img06.JPG" alt="image">
+                                </div>
+                                <div class="item item__descr">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat, quia totam ab doloribus, vitae, quaerat et modi deleniti voluptate rem recusandae, reprehenderit harum deserunt veniam sequi dignissimos possimus! </li>
+                                        <li>цена: 32500 грн</li>
+                                        <li>наличие: в наличии</li>
+                                        <li>Заказать!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="slider__swither">
+                            <ul class="slider__wrapper">
+                                <li data-descr="content__item--1" class="swither__item active">
+                                    <img src="./images/catalog_img01.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--1" class="swither__item">
+                                    <img src="./images/catalog_img03.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--2" class="swither__item">
+                                    <img src="./images/catalog_img04.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--3" class="swither__item">
+                                    <img src="./images/catalog_img05.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--4" class="swither__item">
+                                    <img src="./images/catalog_img06.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--5" class="swither__item">
+                                    <img src="./images/catalog_img07.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                                <li data-descr="content__item--6" class="swither__item">
+                                    <img src="./images/catalog_img09.JPG" alt="image">
+                                    <p>Крупоцеха - крупорушки <br> <span>32500грн</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="slider__nav">
+                            <a class="swither--prev" href="#">prev</a>
+                            <a class="swither--next" href="#">next</a>
+
+                        </div>
+                    </div>
+                </section>
                 <section class="content__grid">
                     <h2>Каталог товаров</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi animi dolorum quae, alias facilis accusamus nobis. Nihil voluptas ipsum maiores deleniti consectetur sit necessitatibus similique sequi nam minima? Illo, assumenda?</p>
@@ -134,7 +256,7 @@
                             <p>Крупоцеха - крупорушки Феремер</p>
                         </a>
                         <a href="#" class="content__section">
-                            <div class="content__img"><img src="./images/catalog_img02.png" alt="фермер"></div>
+                            <div class="content__img"><img src="./images/catalog_img02.jpg" alt="фермер"></div>
                             <p>Вертикальные комбикормовые установки КУВ-0.5,1.0,1.5</p>
                         </a>
                         <a href="#" class="content__section">
@@ -158,7 +280,7 @@
                             <p>Семенорушки-шелушители центробежные: СЦ-1,0; СЦ-2,0</p>
                         </a>
                         <a href="#" class="content__section">
-                            <div class="content__img"><img src="./images/catalog_img08.png" alt="фермер"></div>
+                            <div class="content__img"><img src="./images/catalog_img08.jpg" alt="фермер"></div>
                             <p>Грече-просо-рушка. Производство гречневой крупы и пшена</p>
                         </a>
                         <a href="#" class="content__section">
@@ -192,11 +314,13 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+   
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/jquery.inputmask.js"></script>
+     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 </html>
