@@ -187,23 +187,93 @@ textarea:focus {
 //     padding: 0;
 //     transition-duration: .2s
 // }
-.item {
-    display: inline-block;
-    vertical-align: top;
-    width: 60%;
-}
-.item__img {
-    padding: 10px;
-    width: 35%;
-}
-.content__item {
-    display: none;
-}
+
+// .item {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 60%;
+//     @include m('img') {
+//         padding: 10px;
+//         width: 35%;
+//     }
+// }
+
+// .content__item {
+//     display: none;
+// }
 .cost {
     @extend .section-default;
-    padding: 3px 10px;
-    line-height: 2.2em;
+        background-color: $bg-middle-blue;
+        color: $middle-blue;
+        font-weight: 600; 
+        line-height: 3em;
+        padding: 5px 10px;
 }
 .widget i {
-    color: $clr-orang;
+    color: $clr-dark-blue;
+}
+.catalog {
+    @extend .section-default;
+    padding: 20px;
+}
+   .catalog>ul{
+        height: 30px;
+    }
+    .catalog>h5 {
+        text-align: center;
+    }
+    .catalog>img,
+    .desc {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .desc {
+        padding: 0 20px;
+    }
+     .desc p {
+        color: $clr-gray-m;
+     }
+        .desc__cost {
+            @extend .cost;
+                font-size: 1.2em
+        }
+    .tab__desc p {
+        padding: 20px 0;
+    }
+    .tab__feature table {
+        border-collapse: collapse;
+        width: 620px;
+        margin: 30px 0; 
+        font-size: 1em;
+    }
+        .tab__feature td {
+            vertical-align: middle;
+            padding: 3px 10px;
+            border: 2px solid $light-blue;
+            max-width: 120px;
+        }
+    .tab__link {
+        color: $clr-gray;
+        float: left;
+        font-size: 1.1em;
+        padding: 10px;
+        text-decoration: none;
+    }   
+        .tab__link:focus,
+        .tab__link:hover {
+            color: $clr-gray;
+            text-decoration: none;
+        }
+        .tab__link.active {
+            color: $clr-blue;
+        }
+.color--green {
+    color: $clr-green;
+    font-weight: 600;
+}
+.phone__hide {
+    cursor: pointer;
+}
+.bold {
+    font-weight: 600;
 }

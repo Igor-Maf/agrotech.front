@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>agrotech</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/css-reset/reset.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <p>В браузере отключен javascript!</p>
+    </noscript>
+
+    <div class="container">
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo">
+                <a href="/" class="logo__link" title="АгроТех Николаев" alt="АгроТех Николаев">
+                    <img src="images/logo.png" class="logo__img" alt="АгроТех Николаев" />
+                </a>
+            </div>
+            <div class="info">
+                <!--<h4 class="info__title">ПромСельПроект ПКБ</h4>-->
+                <div class="info__details">
+                    <p class="address"> 
+                        Адрес: 
+                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                    <p class="phone">
+                        Телефон: <strong>+380 (512) 50-88-01</strong>
+                    </p>
+                    <p class="email">
+                        Email: 
+                        <strong>
+                            <a href="mailto:smaple@mail.com" class="info__link">smaple@mail.com</a>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!-- end: header -->
+
+
+        <article class="page page--left-aside">
+            <!-- start: sidebar -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h5 class="widget__title">Товары</h5>
+                    <ul class="widget__list">
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">
+                                Зерноочистительные машины <span class="count">(3)</span>
+                            </a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Переработка сельскохозяйственной продукции <span>(18)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Производство комбикормов <span>(22)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Разбрасыватели удобрений <span>(1)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Элеваторы <span>(7)</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h5 class="widget__title">Наши контакты</h5>
+                    <p class="widget__content">
+                        <i class="fa fa-phone"></i>
+                        <strong>+380 (512) 50-88-01</strong>
+                        <hr />
+                        <i class="fa fa-home"></i> 
+                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                </div>
+
+                <div class="widget widget--form">
+                    <h5 class="widget__title">Напишите нам</h5>
+                    <form class="widget__content contact-form">
+                        <p class="widget__item">Наши специалисты ответят на любые Ваши вопросы.</p>
+
+                        <fieldset class="contact-form__row">
+                            <label for="name">Ваше имя <span class="required"></span></label>
+                            <input type="text" id="name" name="name" required />
+                        </fieldset>
+
+                        <fieldset class="contact-form__row">
+                            <label for="phone">Телефон<span class="required"></span></label>
+                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                        </fieldset>
+
+                         <fieldset class="contact-form__row">
+                            <label for="message">Сообщение<span class="required"></span></label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </fieldset>
+                        <button type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </aside>
+            <!-- end: sidebar -->
+
+            <section class="content">
+                <section class="catalog">
+                <h5>Крупоцеха - крупорушки Фермер</h5>
+                <img src="images/catalog_img01.JPG" alt="img01">
+                <div class="desc">
+
+                    <p>Тип: розница и опт <br>
+                        Наличие: <span class="color--green">в наличии</span><br>
+                        Телефон: <span class="phone__hide bold">показать телефон</span><br>
+                    </p>
+                    <span class="desc__cost">14000.00 грн</span>
+                </div>
+                <ul>
+                    <li><a class="tab__link  active" data-tab="tab__desc" href="#">описание</a></li>
+                    <li> <a class="tab__link" data-tab="tab__feature" href="#">характеристика</a></li>
+                </ul>
+                
+               
+                <div class="tab tab__desc">
+                    <p>
+                        Оригинальность конструкции обеспечивает:
+                        <ul>
+                            <li>
+                                - Значительное снижение его стоимости по сравнению с другими конструкциями
+                            </li>
+                            <li>
+                                - Простоту и удобства в его обслуживании (достаточно инструктажа, а не обучения персонала).
+                            </li>
+                            <li>
+                                - Возможность осуществлять его ремонт самостоятельно или в условиях небольшой мастерской (не нужна дорогостоящая перенарезка металлических валков). 
+                            </li>
+                            <li>
+                                - Не требует предварительной очистки зерна перед его переработкой.
+                            </li>
+                            <li>
+                                - Не обязательно производить предварительное снятие цветочной оболочки ячменя и пшеницы на шелушильно-шлифовочной машине т.к. частично процесс шелушения зерна происходит одновременно с его измельчением, штифтами, в ситовом цилиндре.
+                            </li>
+                        </ul>      
+                     </p>
+                     <p>
+                        Степень измельчения  зерна и процесс выхода готового продукта зависит от  размеров отверстий в сменных ситах в ситовом цилиндре <br>
+                        Влажность зерна перед переработкой – 14% <br>
+                        Окупаемость оборудования – 4 мес <br>
+                    </p>
+                    <p>
+                    <span class="bold">Технологические операции:</span><br>
+                    <strong>Фермер 2, Фермер 2а, Фермер 3, Фермер 4, Фермер 5:</strong><br>
+                    Измельчение зерна до размеров не превышаюшающих диаметр отверстий в установленном сменном сите измельчителя. <br>
+                    Отбор мучки и цветочной оболочки от круп в аспирационом канал сразу после измельчения до разделения на фракции. <br>
+                    Сбор цветочной оболочки и мучки в циклон с помощью ц/б вентелятора. <br>
+                    <strong>Фермер 2, 2а:</strong> Удаление мучки от крупы на неподвижном сите площадью S=0,07m2; <br>
+                    <strong>Фермер 3, 4, 5:</strong> Разделение круп на 4 фракции с помощью трехситового  вибрационного рассева S=1.5-2,3 m2; <br>
+                    Повторное (при необходимости) провеивание каждой фракции крупы после рассева от возможных остатков цветочной оболочки мучки.
+                    </p>
+                </div>
+                    <div class="tab tab__feature">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="td__title--left">Крупа</td>
+                                    <td colspan="5">Производительность кг/ч по сырью:</td>
+                                </tr>
+                                <tr>
+                                    <td>Фермер 2</td>
+                                    <td>Фермер 2а</td>
+                                    <td>Фермер 3</td>
+                                    <td>Фермер 4</td>
+                                    <td>Фермер 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Пщеничная</td>
+                                    <td>175</td>
+                                    <td>252</td>
+                                    <td>250</td>
+                                    <td>350</td>
+                                    <td>525</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячневая</td>
+                                    <td>105</td>
+                                    <td>160</td>
+                                    <td>160</td>
+                                    <td>225</td>
+                                    <td>345</td>
+                                </tr>
+                                <tr>
+                                    <td>Кукурузная</td>
+                                    <td>305</td>
+                                    <td>425</td>
+                                    <td>425</td>
+                                    <td>595</td>
+                                    <td>875</td>
+                                </tr>
+                                <tr>
+                                    <td>Кв-во фракций</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3-4</td>
+                                    <td>4-4</td>
+                                    <td>5-4</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">Выход готового продукта 80-85%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="td__title--left"></td>
+                                    <td colspan="5">Технические характеристики:</td>
+                                </tr>
+                                <tr>
+                                    <td>Фермер 2</td>
+                                    <td>Фермер 2а</td>
+                                    <td>Фермер 3</td>
+                                    <td>Фермер 4</td>
+                                    <td>Фермер 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Установленная мощность, кВт</td>
+                                    <td>4,2</td>
+                                    <td>5,7</td>
+                                    <td>6,8</td>
+                                    <td>9,4</td>
+                                    <td>12,9</td>
+                                </tr>
+                                <tr>
+                                    <td>Габариты, мм</td>
+                                    <td>1300 х 1000 х 1700</td>
+                                    <td>1300 х 1000 х 1700</td>
+                                    <td>1600 х 1200 х 1800</td>
+                                    <td>1600 х 1200 х 1800</td>
+                                    <td>1800 х 1200 х 1900</td>
+                                </tr>
+                                <tr>
+                                    <td>Масса, кг</td>
+                                    <td>180</td>
+                                    <td>205</td>
+                                    <td>270</td>
+                                    <td>300</td>
+                                    <td>370</td>
+                                </tr>
+                                <tr>
+                                    <td>Стоимость с эконом - комплектацией на 17.03.2015г.</td>
+                                    <td>32500</td>
+                                    <td>33000</td>
+                                    <td>41000</td>
+                                    <td>43000</td>
+                                    <td>47000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+               
+            </section>
+
+        </article>
+
+
+        <footer>
+            <p class="copyright">Сайт создан <a href="http://one-team.net.ua">One-Team</a></p>
+        </footer>
+        <div class=""></div>
+    </div>
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+   
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/jquery.inputmask.js"></script>
+     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

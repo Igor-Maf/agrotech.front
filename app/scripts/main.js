@@ -14,6 +14,7 @@ $(window).ready(function() {
         autoUnmask: true
     });
 
+
     /* =========================== SWITCHER-CAROUSEL =========================== */  
 
     $('div.slider').find(".swither__item").each(function() {
@@ -22,7 +23,7 @@ $(window).ready(function() {
 
     var maxScrollPosition = totalWidth - $('div.slider').find(".slider__swither").outerWidth(),
     switcher = $('div.slider').find(".slider__wrapper");
-    
+
         // activeSwitcher = $('div.slider').find('.active');
 
         //console.log(maxScrollPosition);
@@ -79,5 +80,25 @@ $(window).ready(function() {
 // 					});
 // $('.swither__item:first-child').trigger('click');
 
+    $('.tab__feature').hide();
+
+    $('.tab__link').on('click', function( e ) {
+        e.preventDefault();
+
+        var $this = $(this);
+
+        $('.tab__link').removeClass('active');
+        $('.tab').hide();
+
+        $this.addClass('active');
+        $('.' + $this.data('tab')).fadeToggle(300);
+    });
+
+    $('.phone__hide').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).replaceWith('<strong>093-45-258-55</strong>');
+
+});
 });
 
