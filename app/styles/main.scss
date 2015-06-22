@@ -117,16 +117,16 @@ textarea:focus {
 .contact-form button {
    @extend textarea;
     background-color: $middle-blue;
-    color: #fff;
+    color: $clr-white;
     font-size: 1.2em;
 }
 .contact-form button:focus {
-    background-color: #fff;
+    background-color: $clr-white;
     color: $middle-blue;
 }
 .slider {
     @extend .section-default;
-    background-color: #fff;
+    background-color: $clr-white;
     height: 230px;
     position: relative;
     text-align: center;
@@ -151,7 +151,7 @@ textarea:focus {
 }
 .slider__nav {}
 .swither__item {
-    background-color: #fff;
+    background-color: $clr-white;
     box-sizing: border-box;
     float: left;
     height: 150px;
