@@ -97,7 +97,7 @@ $(window).ready(function() {
     $('.phone__hide').on('click', function(e) {
         e.preventDefault();
 
-        $(this).replaceWith('<strong>093-45-258-55</strong>');
+        $(this).replaceWith('<strong class="color--green">093-45-258-55</strong>');
 
 });
 });

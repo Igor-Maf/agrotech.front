@@ -201,14 +201,7 @@ textarea:focus {
 // .content__item {
 //     display: none;
 // }
-.cost {
-    @extend .section-default;
-        background-color: $bg-middle-blue;
-        color: $middle-blue;
-        font-weight: 600; 
-        line-height: 3em;
-        padding: 5px 10px;
-}
+
 .widget i {
     color: $clr-dark-blue;
 }
@@ -224,8 +217,7 @@ textarea:focus {
     }
     .catalog>img,
     .desc {
-        display: inline-block;
-        vertical-align: middle;
+        @extend .inline-block-vcenter;
     }
     .desc {
         padding: 0 20px;
@@ -234,7 +226,7 @@ textarea:focus {
         color: $clr-gray-m;
      }
         .desc__cost {
-            @extend .cost;
+            @extend .cost--invert;
                 font-size: 1.2em
         }
     .tab__desc p {
@@ -269,11 +261,15 @@ textarea:focus {
         }
 .color--green {
     color: $clr-green;
-    font-weight: 600;
 }
 .phone__hide {
     cursor: pointer;
 }
-.bold {
-    font-weight: 600;
+.navbar {
+    @extend .section-default;
+    width: 100%;
+    margin: 20px 0;
+}
+.navbar li {
+    display: inline-block;
 }

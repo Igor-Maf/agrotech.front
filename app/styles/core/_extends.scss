@@ -49,7 +49,7 @@
 
 
 .section-simple {
-	background: #fff;
+	background: $clr-white;
 	border: 1px solid $light-blue;
 	border-radius: 10px;
 }
@@ -57,4 +57,17 @@
 .section-default {
 	@extend .section-simple;
 	border-bottom: 3px solid $middle-blue;
+}
+.cost {
+    @extend .section-simple;
+        background-color: $bg-middle-blue;
+        color: $middle-blue;
+        font: 1.1em/3em 'HelveticaNeueCyr Bold';
+        padding: 5px 10px;
+}
+.cost--invert {
+    @extend .cost;
+        color: $clr-white;
+        background-color: $middle-blue;
+        border-color: $middle-blue;
 }
