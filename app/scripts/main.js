@@ -52,13 +52,13 @@ $(window).ready(function() {
 
         $('div.slider').find(".swither__item:first").addClass("swither__item--edge")
 
-        $('div.slider').find(".swither--prev").on('click', function(e) {
+        $('div.slider').find(".nav--prev").on('click', function(e) {
             e.preventDefault()
             var $targetItem = $('div.slider').find(".swither__item--edge").prev()
             toGalleryItem($targetItem)
         })
 
-        $('div.slider').find(".swither--next").on('click', function(e) {
+        $('div.slider').find(".nav--next").on('click', function(e) {
             e.preventDefault()
             var $targetItem = $('div.slider').find(".swither__item--edge").next()
             toGalleryItem($targetItem)
