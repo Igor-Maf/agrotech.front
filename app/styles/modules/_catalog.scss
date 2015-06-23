@@ -56,13 +56,14 @@
             background-color: $clr-white;
             z-index: 10;
         }
+        @include e('desc li:before') {
+            font-family: 'FontAwesome';
+            content: "\f178";
+        }
     }
     .tab ul,
     .tab p {
         padding: 20px;
-    }
-    .tab__link:focus {
-        
     }
 .color--green {
     color: $clr-green;
