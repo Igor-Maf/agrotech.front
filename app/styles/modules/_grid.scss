@@ -1,7 +1,6 @@
 /* ===============================
  		grid-content
 ================================*/
-
 .grid {
 	@include m('catalog') {
 		@extend .section-default;
@@ -9,31 +8,93 @@
 		box-sizing: border-box;
 	}
 }
-.content__section:hover {
-    border-radius: 5px;
-    box-shadow: 0 1px 7px 0 $clr-blue;
-    cursor: pointer;
-}
-.content__section {  
-    display: inline-block;
-    height: 270px;
-    margin-right: -1px;
-    margin: 10px;
-    padding-top: 10px;
-    text-align: center;
-    vertical-align: bottom;
-    width: 189px;
-}
-.content__img {
+.content-img {
 	border-radius: 5px;
 	border: 1px solid $light-blue;
-	height: 150px;
-	line-height: 17em;
-	margin: 0 auto;
 	padding: 10px;
-	width: 150px;
 }
-.content__img img {
-	max-height: 150px;
-	max-width: 150px;
+
+
+.content {
+	@include e('section') {
+		@extend .inline-block-vbottom;
+		height: 270px;
+		margin: 10px;
+		padding-top: 10px;
+		text-align: center;
+		width: 189px;
+		@include s(':hover') {
+			border-radius: 5px;
+			box-shadow: 0 1px 7px 0 $clr-blue;
+			cursor: pointer;
+		}
+	}
+	@include e('img') {
+		@extend .content-img;
+		height: 150px;
+		line-height: 17em;
+		margin: 0 auto;
+		width: 150px;
+	}
+	@include e('img img') {
+		max-height: 150px;
+		max-width: 150px;
+	}
+	@include e('list') {
+		@extend .grid--catalog;
+	}
+	@include e('list>ul') {
+		margin-bottom: 20px;
+	}
+}
+.list {
+	@include e('section') {
+		padding: 10px;
+		box-sizing: border-box;
+		@include s(':hover') {
+			@extend .content__section:hover;
+		}
+	}
+	@include e('img') {
+		@extend .content-img;
+		width: 100px;
+		display: inline-block;
+	}
+	@include e('desc') {
+		display: inline-block;
+		padding-left: 20px;
+		width: 70%;	
+	}
+	@include e('desc p') {
+		line-height: 1.2em;
+		font-size: .8em;
+		padding: 5px 0;
+	}
+	@include m('title') {
+		font-family: 'HelveticaNeueCyr Bold';
+	}
+}
+.paginator {
+	text-align: center;
+}
+.paginator li {
+	@extend .inline-block;
+	vertical-align: top;
+}
+.paginator a {
+	padding: 2px 5px;
+	// text-decoration: underline;
+}
+.pag--active,
+.paginator li:hover {
+	background-color: $bg-middle-blue;
+}
+.pag {
+	@include e('first') {}
+	@include e('next') {}
+	@include e('prev') {}
+	@include e('end') {}
+	@include m('all') {
+		font-size: .7em;
+	}
 }

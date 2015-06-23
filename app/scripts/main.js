@@ -80,7 +80,9 @@ $(window).ready(function() {
 // 					});
 // $('.swither__item:first-child').trigger('click');
 
-    $('.tab__feature').hide();
+    $('.tab').hide();
+    $('.tab__desc').show();
+
 
     $('.tab__link').on('click', function( e ) {
         e.preventDefault();
@@ -93,6 +95,7 @@ $(window).ready(function() {
         $this.addClass('active');
         $('.' + $this.data('tab')).fadeToggle(300);
     });
+
 
     $('.phone__hide').on('click', function(e) {
         e.preventDefault();

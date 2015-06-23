@@ -1,0 +1,23 @@
+.navbar {
+    @extend .section-default;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 5px 10px;
+    width: 100%;
+}
+.navbar li {
+    display: inline-block;
+    width: 133px;
+}
+.navbar li a {
+    @extend .section-simple;
+    display: block;
+    line-height: 2.6em;
+    text-align: center;
+    margin: 5px 0;
+    font-family: 'HelveticaNeueCyr Bold';
+}
+.navbar li a:hover {
+    text-decoration: none;
+    background-color: $bg-middle-blue;
+}

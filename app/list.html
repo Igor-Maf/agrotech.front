@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>agrotech</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/css-reset/reset.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <p>В браузере отключен javascript!</p>
+    </noscript>
+
+    <div class="container">
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo">
+                <a href="/" class="logo__link" title="АгроТех Николаев" alt="АгроТех Николаев">
+                    <img src="images/logo.png" class="logo__img" alt="АгроТех Николаев" />
+                </a>
+            </div>
+            <div class="info">
+                <!--<h4 class="info__title">ПромСельПроект ПКБ</h4>-->
+                <div class="info__details">
+                    <p class="address"> 
+                        Адрес: 
+                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                    <p class="phone">
+                        Телефон: <strong>+380 (512) 50-88-01</strong>
+                    </p>
+                    <p class="email">
+                        Email: 
+                        <strong>
+                            <a href="mailto:smaple@mail.com" class="info__link">smaple@mail.com</a>
+                        </strong>
+                    </p>
+                </div>
+            </div>
+
+        </header>
+        <!-- end: header -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Товары</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Прайс-листы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+
+
+        <article class="page page--left-aside">
+            <!-- start: sidebar -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h5 class="widget__title">Товары</h5>
+                    <ul class="widget__list">
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">
+                                Зерноочистительные машины <span class="count">(3)</span>
+                            </a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Переработка сельскохозяйственной продукции <span>(18)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Производство комбикормов <span>(22)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Разбрасыватели удобрений <span>(1)</span></a>
+                        </li>
+                        <li class="widget__item">
+                            <a href="#" class="widget__link">Элеваторы <span>(7)</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h5 class="widget__title">Наши контакты</h5>
+                    <p class="widget__content">
+                        <i class="fa fa-phone"></i>
+                        <strong>+380 (512) 50-88-01</strong>
+                        <hr />
+                        <i class="fa fa-home"></i> 
+                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                </div>
+
+                <div class="widget widget--form">
+                    <h5 class="widget__title">Напишите нам</h5>
+                    <form class="widget__content contact-form">
+                        <p class="widget__item">Наши специалисты ответят на любые Ваши вопросы.</p>
+
+                        <fieldset class="contact-form__row">
+                            <label for="name">Ваше имя <span class="required"></span></label>
+                            <input type="text" id="name" name="name" required />
+                        </fieldset>
+
+                        <fieldset class="contact-form__row">
+                            <label for="phone">Телефон<span class="required"></span></label>
+                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                        </fieldset>
+
+                         <fieldset class="contact-form__row">
+                            <label for="message">Сообщение<span class="required"></span></label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </fieldset>
+                        <button type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </aside>
+            <!-- end: sidebar -->
+
+            <section class="content">
+
+                <section class="content__block">
+                    <h1>Каталог товаров</h1>
+                </section>
+
+                <section class="content__list">
+                    <ul>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list__section">
+                                <div class="list__img">
+                                    <img src="./images/catalog_img03.JPG" alt="фермер">
+                                </div>
+                                <div class="list__desc">
+                                    <a class="list--title" href="#">Крупоруша</a>
+                                    <p>
+                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                    </p>
+                                    <strong>цена: 23000 грн</strong>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="paginator">
+                        <ul>
+                            <li class="pag__first pag--all">
+                                <a href="#">
+                                    <i class="fa fa-fast-backward"></i>
+                                </a>
+                            </li>
+                            <li class="pag__prev">
+                                <a href="#">
+                                    <i class="fa fa-caret-left"></i>
+                                </a>
+                            </li>
+                            <li  class="pag--active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="pag__next">
+                                <a href="#">
+                                    <i class="fa fa-caret-right"></i>
+                                </a>
+                            </li>
+                            <li class="pag__end pag--all">
+                                <a href="#">
+                                    <i class="fa fa-fast-forward"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+        </article>
+
+
+        <footer>
+            <p class="copyright">Сайт создан <a href="http://one-team.net.ua">One-Team</a></p>
+        </footer>
+        <div class=""></div>
+    </div>
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+   
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/jquery.inputmask.js"></script>
+     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
