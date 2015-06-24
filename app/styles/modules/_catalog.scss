@@ -2,17 +2,21 @@
     @extend .section-default;
     padding: 20px;
 }
+
    .catalog>ul{
         height: 30px;
     }
+
     .catalog>h5 {
         text-align: center;
     }
+
     .catalog>img,
     .desc {
         @extend .inline-block-vcenter;
         padding: 0 20px;
     }
+
     .desc p {
         color: $clr-gray-m;
     }
@@ -21,16 +25,22 @@
                 font-size: 1.2em
         }
     .tab {
+        @extend .tabs;
+
         @include e('feature table') {
         margin: 30px 0; 
         width: 620px;
+        text-align: center;
+        font-size: .9em;
         }
+
         @include e('feature td') {
             border: 2px solid $light-blue;
             max-width: 120px;
-            padding: 3px 10px;
+            padding: 3px 7px;
             vertical-align: middle;
         }
+
         @include e('link') {
             color: $clr-gray;
             float: left;
@@ -40,14 +50,17 @@
             border: 1px solid $clr-gray;
             border-bottom: none;
             border-radius: 10px 10px 0 0;
+
             @include s(':hover') {
                 color: $clr-gray;
                 text-decoration: none;
             }
+
             @include s(':focus') {
                 @extend .tab__link:hover;
             }
         }
+
         @include e('link.active') {
             color: $clr-blue;
             border: 1px solid $clr-blue;
@@ -56,11 +69,13 @@
             background-color: $clr-white;
             z-index: 10;
         }
+
         @include e('desc li:before') {
             font-family: 'FontAwesome';
             content: "\f178";
         }
     }
+
     .tab ul,
     .tab p {
         padding: 20px;
@@ -75,4 +90,8 @@
     display: block;
     padding-bottom: 13px;
     border-bottom: 1px solid $clr-blue;
+}
+.td__title {
+    font-family: 'HelveticaNeueCyr Bold';
+    background-color: $bg-slight-blue;
 }

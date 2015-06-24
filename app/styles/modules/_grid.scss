@@ -13,8 +13,6 @@
 	border: 1px solid $light-blue;
 	padding: 10px;
 }
-
-
 .content {
 	@include e('section') {
 		@extend .inline-block-vbottom;
@@ -50,6 +48,7 @@
 .list {
 	@include e('section') {
 		padding: 10px;
+		margin: 10px 0;
 		box-sizing: border-box;
 		@include s(':hover') {
 			@extend .content__section:hover;
@@ -63,12 +62,15 @@
 	@include e('desc') {
 		display: inline-block;
 		padding-left: 20px;
-		width: 70%;	
+		width: 75%;	
+		@include s('>.category') {
+			float: right;
+		}
 	}
 	@include e('desc p') {
 		line-height: 1.2em;
 		font-size: .8em;
-		padding: 5px 0;
+		padding: 8px 0;
 	}
 	@include m('title') {
 		font-family: 'HelveticaNeueCyr Bold';
