@@ -13,7 +13,7 @@ if (typeof Object.create !== 'function' ) {
     var Slider = {
         init: function( options, elem ) {
 
-            var maxScrollPosition, section, switcher, totalWidth, contentWidth,
+            var maxScrollPosition, section, switcher, totalWidth, contentWidth, totalHeigt,
                 self = this;
                 self.elem = elem;
                 // self.$elem = $ ( elem );
@@ -40,29 +40,29 @@ if (typeof Object.create !== 'function' ) {
 
         calcConst: function() {
             totalWidth = 0;
+            totalHeigt =0;
 
             section = $(this.elem).outerWidth() - 40;
             contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2;
 
             $(this.elem).find('.slider__swither').width(section);
 
-            $(this.elem).find('.swither__item').css({
+            $(this.elem).find('.swither__item')
+                            .css({
+                                    'width':contentWidth + this.options.spaceSection * 2,
+                                    'padding-left': this.options.spaceSection,
+                                    'padding-right': this.options.spaceSection
+                                })
+                                .each(function() {
+                                    totalWidth = totalWidth + $(this).outerWidth(true);
+                                });;
 
-                'width':contentWidth + this.options.spaceSection * 2,
-                'padding-left': this.options.spaceSection,
-                'padding-right': this.options.spaceSection
+            this.options.category === 'false'
+                ? $(this.elem).find('.category').hide()
+                : totalHeigt += $(this.elem).find('.category').outerHeight();
 
-            });
 
-            if (this.options.height === 'auto') {
-                $(this.elem).find('.swither__item').height(contentWidth);
-            } else {
-                $(this.elem).find('.swither__item').height(this.options.height);
-            };
-
-            $(this.elem).find(".swither__item").each(function() {
-                totalWidth = totalWidth + $(this).outerWidth(true);
-            });
+            totalHeigt += $(this.elem).find('.slider__wrapper p').outerHeight();
 
             maxScrollPosition = totalWidth - $(this.elem).find(".slider__swither").outerWidth();
             switcher = $(this.elem).find(".slider__wrapper");
@@ -70,6 +70,15 @@ if (typeof Object.create !== 'function' ) {
             switcher.width(totalWidth + 20);
 
             $(this.elem).find(".swither__item:first").addClass("swither__item--edge");
+
+            if (this.options.autoHeight === 'true') {
+                console.log('true');
+                $(this.elem).find('.swither__item').height(contentWidth);
+                $(this.elem).find('.slider__swither').height(totalHeigt + contentWidth);
+                $(this.elem).height(totalHeigt + contentWidth + 40);
+            } else {
+                $(this.elem).find('.swither__item').height(this.options.autoHeight);
+            };
 
         },
 
@@ -107,11 +116,19 @@ if (typeof Object.create !== 'function' ) {
     $.fn.sliderGoods.options = {
         caseLimit: 4, //кол-во товаров в витрине
         butPosition: 'bottom', // позиция кнопок
-        height: 'auto', // высота всего слайдера
+        autoHeight: 'false', // высота всего слайдера
         desc: 'true', // описание под изображением
-        category: 'false', //показ категорий
+        category: 'true', //показ категорий
         spaceSection: 15 //расстояние между секциями
     };
+
+    $('[name="phone"]').inputmask("mask", {
+        mask: "+9[9](999)99-9999[9]",
+        skipOptionalPartCharacter: " ",
+        showMaskOnHover: false,
+        autoUnmask: true
+    });
+
 
 })( jQuery, window, document );
 
@@ -124,12 +141,7 @@ $(window).ready(function() {
 
     // var totalWidth = 0;
 
-    $('[name="phone"]').inputmask("mask", {
-        mask: "+9[9](999)99-9999[9]",
-        skipOptionalPartCharacter: " ",
-        showMaskOnHover: false,
-        autoUnmask: true
-    });
+    
 
 
     $('.tab').hide();
@@ -153,6 +165,61 @@ $(window).ready(function() {
         e.preventDefault();
 
         $(this).replaceWith('<strong class="color--green">093-45-258-55</strong>');
+
+});
+// ===============================lists========================================
+
+
+(function(){
+
+
+var menuCell = $('.widget__list>li>ul'),
+    menuButton = $('.widget__item>a');
+
+menuCell
+        .addClass('nav-list')
+            .hide()
+                .children('li')
+                    .show();
+
+menuButton.on('click', function(e){
+    e.preventDefault();
+
+    $(this).parent().hasClass('open')
+        ? $(this).parent().removeClass('open').children('ul').slideUp(200)
+        : $(this).parent().addClass('open').children('ul').slideDown(200);
+
+});
+
+})();
+
+// if ($(window).width() <= 768) {
+        
+//         menuButton.on('mouseenter', function() {
+//             var $this = $(this);
+
+//             timeoutId = setTimeout(function () {
+//                 $this
+//                     .children('ul')
+//                         .slideDown(250)
+//             },500)
+//         });
+
+//         menuButton.on('mouseleave', function() {
+            
+//             clearTimeout(timeoutId);
+
+//             $(this).children('ul').slideUp(400);
+//         });
+
+// }else{
+
+//     menuButton.hover(function() {
+//         $(this).children('ul').slideDown(100);
+//         },
+//         function() {
+//             $(this).children('ul').slideUp(100);
+//         }
 
 
     /* =========================== SWITCHER-CAROUSEL =========================== */  
@@ -211,7 +278,7 @@ $(window).ready(function() {
  // ============================================       
 
 
-});
+
 });
 
 

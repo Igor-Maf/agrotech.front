@@ -21,4 +21,31 @@
 .contact-form__row {
 	padding: 5px 0;
 }
-
+.widget__list {
+	padding-left: 15px;
+}
+.widget__list>li {
+	text-indent: -1.1em;
+}
+.widget__list>li:before {
+	font-family: 'FontAwesome';
+	content: "\f196";
+	color: $clr-blue;
+	cursor: pointer;
+}
+.widget__list>li.open:before {
+	content: "\f147";
+}
+.widget__list>li li {
+	padding-left: 10px;
+	font-size: .9em;
+	text-indent: 0;
+	line-height: 2.5em;
+}
+.widget__item>a {
+	padding-left: 25px;
+	margin-left: -25px;
+	font-family: 'HelveticaNeueCyr Bold';
+	font-size: .9em;
+	line-height: 1em;
+}

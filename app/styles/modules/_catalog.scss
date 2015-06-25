@@ -8,7 +8,7 @@
     }
 
     .catalog>h5 {
-        text-align: center;
+        padding-bottom: 20px;
     }
 
     .catalog>img,
@@ -26,6 +26,7 @@
         }
     .tab {
         @extend .tabs;
+        margin-bottom: 20px;
 
         @include e('feature table') {
         margin: 30px 0; 
@@ -51,12 +52,12 @@
             border-bottom: none;
             border-radius: 10px 10px 0 0;
 
-            @include s(':hover') {
+            &:hover {
                 color: $clr-gray;
                 text-decoration: none;
             }
 
-            @include s(':focus') {
+            &:focus {
                 @extend .tab__link:hover;
             }
         }

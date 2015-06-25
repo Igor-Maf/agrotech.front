@@ -61,7 +61,7 @@
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Товары</a></li>
                     <li><a href="list.html">Услуги</a></li>
-                    <li><a href="#">Статьи</a></li>
+                    <li><a href="about.html">Статьи</a></li>
                     <li><a href="#">Прайс-листы</a></li>
                     <li><a href="#">Отзывы</a></li>
                     <li><a href="#">Контакты</a></li>
@@ -79,18 +79,44 @@
                             <a href="#" class="widget__link">
                                 Зерноочистительные машины <span class="count">(3)</span>
                             </a>
+                            <ul>
+                                <li><a href="#">Машина для очистки зерна (1)</a></li>
+                                <li><a href="#">Семяочистительные машины (1)</a></li>
+                                <li><a href="#">Шелушитель зерна (1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
                             <a href="#" class="widget__link">Переработка сельскохозяйственной продукции <span>(18)</span></a>
+                            <ul>
+                                <li><a href="#">Оборудования для виноделия(1)</a></li>
+                                <li><a href="#">Переработка зерна(16)</a></li>
+                                <li><a href="#">Переработка овощей(1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
                             <a href="#" class="widget__link">Производство комбикормов <span>(22)</span></a>
+                            <ul>
+                                <li><a href="#">Зернодробилка (5)</a></li>
+                                <li><a href="#">Комбикорнмовые установки (5)</a></li>
+                                <li><a href="#">Кормоизмельчитель (2)</a></li>
+                                <li><a href="#">Кормосмесители (4)</a></li>
+                                <li><a href="#">Минизаводы комбикормовые (4)</a></li>
+                                <li><a href="#">Молотилка кукрузных початков (2)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
                             <a href="#" class="widget__link">Разбрасыватели удобрений <span>(1)</span></a>
+                            <ul>
+                                <li><a href="#">Разбрасыватель минеральных удобрений (1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
                             <a href="#" class="widget__link">Элеваторы <span>(7)</span></a>
+                            <ul>
+                                <li><a href="#">Загрузчики (1)</a></li>
+                                <li><a href="#">Транспортеры (2)</a></li>
+                                <li><a href="#">Элеваторное оборудование (4)</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -346,6 +372,9 @@
      <script src="scripts/main.js"></script>
      <script>
         $('div.slider').sliderGoods({
+            caseLimit: 4,
+            category: 'false',
+            autoHeight: 'true',
             spaceSection: 15 
         });
     </script>
