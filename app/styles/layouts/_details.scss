@@ -2,7 +2,7 @@
 	display: inline-block;
 	color: $clr-blue;
 	
-	@include s('>a') {
+	&>a {
 		border-radius: 5px;
 		border: 2px solid #333;
 		border-color: inherit;
@@ -12,9 +12,10 @@
 		font-family: 'HelveticaNeueCyr Bold';
 	}
 
-	@include s('>a:hover') {
+	&>a:hover {
 		text-decoration: none;
 		color: inherit;
+		box-shadow: 0px 0px 3px 0px;
 	}
 
 	@include m('cat1') {
@@ -48,8 +49,11 @@
 	text-align: center;
 	display: inline-block;
 	width: 80%;
+	& li {
+		display: inline-block;
+		width: 20%;
+	}
 }
 .site-map li {
-	display: inline-block;
-	width: 20%;
+
 }

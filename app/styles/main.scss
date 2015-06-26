@@ -17,8 +17,9 @@
 @import "modules/grid";
 @import "modules/navbar";
 @import "modules/slider";
-@import "modules/catalog";
 @import "modules/about";
+@import "modules/catalog";
+
 
 
 
@@ -126,10 +127,10 @@ textarea:focus {
     background-color: $middle-blue;
     color: $clr-white;
     font-size: 1.2em;
-}
-.contact-form button:focus {
-    background-color: $clr-white;
-    color: $middle-blue;
+    &:focus {
+        background-color: $clr-white;
+        color: $middle-blue;
+    }
 }
 .widget i {
     color: $clr-dark-blue;

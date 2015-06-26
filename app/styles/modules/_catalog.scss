@@ -1,86 +1,90 @@
 .catalog {
     @extend .section-default;
     padding: 20px;
+    & >ul {
+        height: 30px; 
+    }
+    & h5 {
+       padding-bottom: 20px; 
+    }
+    & >img {
+        @extend .desc;
+    }
 }
 
-   .catalog>ul{
-        height: 30px;
-    }
-
-    .catalog>h5 {
-        padding-bottom: 20px;
-    }
-
-    .catalog>img,
-    .desc {
-        @extend .inline-block-vcenter;
-        padding: 0 20px;
-    }
-
-    .desc p {
+.desc {
+    @extend .inline-block-vcenter;
+    padding: 0 20px;
+    & p {
         color: $clr-gray-m;
     }
-        .desc__cost {
-            @extend .cost--invert;
-                font-size: 1.2em
-        }
-    .tab {
-        @extend .tabs;
-        margin-bottom: 20px;
+    @include e('cost') {
+        @extend .cost--invert;
+        font-size: 1.2em    
+    }
+}
 
-        @include e('feature table') {
+.tab {
+    @extend .tabs;
+    margin-bottom: 20px;
+
+    @include e('feature table') {
         margin: 30px 0; 
         width: 620px;
         text-align: center;
         font-size: .9em;
-        }
+    }
 
-        @include e('feature td') {
-            border: 2px solid $light-blue;
-            max-width: 120px;
-            padding: 3px 7px;
-            vertical-align: middle;
-        }
+    @include e('feature td') {
+        border: 2px solid $light-blue;
+        max-width: 120px;
+        padding: 3px 7px;
+        vertical-align: middle;
+    }
 
-        @include e('link') {
+    @include e('link') {
+        color: $clr-gray;
+        float: left;
+        font-size: 1.1em;
+        padding: 10px;
+        text-decoration: none;
+        border: 1px solid $clr-gray;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+
+        &:hover {
             color: $clr-gray;
-            float: left;
-            font-size: 1.1em;
-            padding: 10px;
             text-decoration: none;
-            border: 1px solid $clr-gray;
-            border-bottom: none;
-            border-radius: 10px 10px 0 0;
-
-            &:hover {
-                color: $clr-gray;
-                text-decoration: none;
-            }
-
-            &:focus {
-                @extend .tab__link:hover;
-            }
         }
 
-        @include e('link.active') {
-            color: $clr-blue;
-            border: 1px solid $clr-blue;
-            border-bottom: 1px solid $clr-white;
-            border-radius: 10px 10px 0 0;
-            background-color: $clr-white;
-            z-index: 10;
-        }
-
-        @include e('desc li:before') {
-            font-family: 'FontAwesome';
-            content: "\f178";
+        &:focus {
+            @extend .tab__link:hover;
         }
     }
 
-    .tab ul,
-    .tab p {
+    @include e('link.active') {
+        color: $clr-blue;
+        border: 1px solid $clr-blue;
+        border-bottom: 1px solid $clr-white;
+        border-radius: 10px 10px 0 0;
+        background-color: $clr-white;
+        z-index: 10;
+    }
+
+    @include e('desc li:before') {
+        font-family: 'FontAwesome';
+        content: "\f178";
+    }
+    & ul,
+    & p {
         padding: 20px;
     }
+}
+
+.tab ul,
+.tab p {
+    
+}
 .color--green {
     color: $clr-green;
 }

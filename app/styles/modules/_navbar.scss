@@ -5,20 +5,21 @@
     padding: 5px 10px;
     text-align: center;
     width: 100%;
-}
-.navbar li {
-    display: inline-block;
-    width: 133px;
-}
-.navbar li a {
-    @extend .section-simple;
-    display: block;
-    line-height: 2.6em;
-    text-align: center;
-    margin: 5px 0;
-    font-family: 'HelveticaNeueCyr Bold';
-}
-.navbar li a:hover {
-    text-decoration: none;
-    background-color: $bg-middle-blue;
+    & li {
+        display: inline-block;
+        width: 133px;
+    }
+    & li a {
+        @extend .section-simple;
+        display: block;
+        line-height: 2.6em;
+        text-align: center;
+        margin: 5px 0;
+        font-family: 'HelveticaNeueCyr Bold';
+    }
+    & li a:hover {
+        // text-decoration: none;
+        // background-color: $bg-middle-blue;
+        box-shadow: 0 1px 7px 0;   
+    }
 }

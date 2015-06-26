@@ -38,11 +38,6 @@
         @content;
     }
 }
-@mixin status($status) {
-    &#{$status} {
-        @content;
-    }
-}
 @mixin e($element) {
     @include element($element)  {
         @content;
@@ -53,11 +48,7 @@
         @content;
     }
 }
-@mixin s($status) {
-    @include status($status) {
-        @content;
-    }
-}
+
 
 /* example bem */
 /*.block {
@@ -68,9 +59,6 @@
         color: #000000;
 
         @include e('element') {
-            color: #000000
-        }
-        @include s(':hover') {
             color: #000000
         }
     }

@@ -1,4 +1,45 @@
 .content__about {
 	@extend .section-default;
 	padding: 20px;
+
+	& img {
+		float: left;
+		margin: 20px;
+	}
+
+	&>p {
+		padding: 10px;
+	}
+}
+.contact {
+	@include e('info') {
+		margin: 20px 0;
+		display: table;
+	}
+
+	@include e('row') {
+		display: table-row;
+	}
+
+	@include m('title') {
+		display: table-cell;
+		padding: 0 20px;
+		min-width: 150px;
+		text-align: right;
+		font-family: 'HelveticaNeueCyr Bold';
+	}
+}
+.contact__info {
+
+}
+.contact__row {
+	
+}
+.contact--title {
+	
+}
+.contact--title,
+.contact--title>p {
+	
+
 }

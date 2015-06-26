@@ -21,7 +21,7 @@
 		padding-top: 10px;
 		text-align: center;
 		width: 189px;
-		@include s(':hover') {
+		&:hover {
 			border-radius: 5px;
 			box-shadow: 0 1px 7px 0 $clr-blue;
 			cursor: pointer;
@@ -50,7 +50,7 @@
 		padding: 10px;
 		margin: 10px 0;
 		box-sizing: border-box;
-		@include s(':hover') {
+		&:hover {
 			@extend .content__section:hover;
 		}
 	}
@@ -63,7 +63,7 @@
 		display: inline-block;
 		padding-left: 20px;
 		width: 75%;	
-		@include s('>.category') {
+		&>.category {
 			float: right;
 		}
 	}
@@ -78,18 +78,22 @@
 }
 .paginator {
 	text-align: center;
+	& li {
+		@extend .inline-block;
+		vertical-align: top;
+	}
+	& li:hover,
+	.pag--active {
+		background-color: $bg-middle-blue;
+	}
+	& a {
+		padding: 2px 5px;
+	}
 }
-.paginator li {
-	@extend .inline-block;
-	vertical-align: top;
-}
-.paginator a {
-	padding: 2px 5px;
-	// text-decoration: underline;
-}
+
 .pag--active,
 .paginator li:hover {
-	background-color: $bg-middle-blue;
+	
 }
 .pag {
 	@include e('first') {}
