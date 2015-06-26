@@ -14,8 +14,10 @@ if (typeof Object.create !== 'function') {
     var Slider = {
         init: function (options, elem) {
 
-            var maxScrollPosition, switcher,
-                    self = this;
+            var self = this;
+
+            self.maxScrollPosition = 0;
+            self.switcher = 0;   
             self.elem = elem;
             self.$elem = $ (elem);
 
@@ -43,8 +45,9 @@ if (typeof Object.create !== 'function') {
             var self = this,
                 totalWidth = 0,
                 totalHeigt = 0,
+                category = self.$elem.find('.category'),
                 section = $(self.elem).outerWidth() - 40,
-                contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2
+                contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2;
                 
 
             self.$elem.find('.slider__swither').width(section);
@@ -59,10 +62,11 @@ if (typeof Object.create !== 'function') {
                                     totalWidth = totalWidth + $(this).outerWidth(true);
                                 });
 
-            this.options.category === 'false'
-                ? self.$elem.find('.category').hide()
-                : totalHeigt += $(this.elem).find('.category').outerHeight();
-
+            if ( this.options.category === 'false'){
+                category.hide();
+             } else {
+                totalHeigt += category.outerHeight();
+            }
 
             totalHeigt += self.$elem.find('.slider__wrapper p').outerHeight();
 
@@ -172,9 +176,11 @@ if (typeof Object.create !== 'function') {
     $('.widget__item>a').on('click', function(e){
         e.preventDefault();
 
-        $(this).parent().hasClass('open')
-        ? $(this).parent().removeClass('open').children('ul').slideUp(200)
-        : $(this).parent().addClass('open').children('ul').slideDown(200);
+        if ($(this).parent().hasClass('open')) {
+            $(this).parent().removeClass('open').children('ul').slideUp(200);
+        } else {
+            $(this).parent().addClass('open').children('ul').slideDown(200);
+        }
 
     });
 
