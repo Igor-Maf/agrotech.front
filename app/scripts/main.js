@@ -1,56 +1,57 @@
 /* jshint devel:true */
 'use strict';
 
-if (typeof Object.create !== 'function' ) {
-    Object.create = function( obj ) {
+if (typeof Object.create !== 'function') {
+    Object.create = function (obj) {
         function F() {}
         F.prototype = obj;
         return new F();
     };
 }
 
-(function( $, window, document, undefined ) {
+(function ($, window, document, undefined) {
 
     var Slider = {
-        init: function( options, elem ) {
+        init: function (options, elem) {
 
             var maxScrollPosition, switcher,
-                self = this;
-                self.elem = elem;
-                // self.$elem = $ ( elem );
+                    self = this;
+            self.elem = elem;
+            self.$elem = $ (elem);
 
-            self.options = $.extend( {}, $.fn.sliderGoods.options, options);
+            self.options = $.extend({}, $.fn.sliderGoods.options, options);
 
             self.calcConst();
 
-            $(this.elem).find('.nav--prev').on('click', function(e) {
+            self.$elem.find('.nav--prev').on('click', function (e) {
                 e.preventDefault();
-                var $targetItem = $(self.elem).find('.swither__item--edge').prev();
+                var $targetItem = self.$elem.find('.swither__item--edge').prev();
 
                 self.toGalleryItem($targetItem);
             });
 
-            $(this.elem).find('.nav--next').on('click', function(e) {
+            self.$elem.find('.nav--next').on('click', function (e) {
                 e.preventDefault();
-                var $targetItem = $(self.elem).find('.swither__item--edge').next();
+                var $targetItem = self.$elem.find('.swither__item--edge').next();
 
                 self.toGalleryItem($targetItem);
             });
 
         },
 
-        calcConst: function() {
-            var totalWidth = 0,
+        calcConst: function () {
+            var self = this,
+                totalWidth = 0,
                 totalHeigt = 0,
-                section = $(this.elem).outerWidth() - 40,
-                contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2,
-                self = this;
+                section = $(self.elem).outerWidth() - 40,
+                contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2
+                
 
-            $(this.elem).find('.slider__swither').width(section);
+            self.$elem.find('.slider__swither').width(section);
 
-            $(this.elem).find('.swither__item')
+            self.$elem.find('.swither__item')
                             .css({
-                                    'width':contentWidth + this.options.spaceSection * 2,
+                                    width:contentWidth + this.options.spaceSection * 2,
                                     'padding-left': this.options.spaceSection,
                                     'padding-right': this.options.spaceSection
                                 })
@@ -59,28 +60,28 @@ if (typeof Object.create !== 'function' ) {
                                 });
 
             this.options.category === 'false'
-                ? $(this.elem).find('.category').hide()
+                ? self.$elem.find('.category').hide()
                 : totalHeigt += $(this.elem).find('.category').outerHeight();
 
 
-            totalHeigt += $(this.elem).find('.slider__wrapper p').outerHeight();
+            totalHeigt += self.$elem.find('.slider__wrapper p').outerHeight();
 
             self.maxScrollPosition = totalWidth - $(this.elem).find('.slider__swither').outerWidth();
             self.switcher = $(this.elem).find('.slider__wrapper');
 
             self.switcher.width(totalWidth + 20);
 
-            $(this.elem).find('.swither__item:first').addClass('swither__item--edge');
+            self.$elem.find('.swither__item:first').addClass('swither__item--edge');
 
             if (this.options.autoHeight === 'true') {
 
-                $(this.elem).find('.swither__item').height(contentWidth);
-                $(this.elem).find('.slider__swither').height(totalHeigt + contentWidth);
-                $(this.elem).height(totalHeigt + contentWidth + 40);
+                self.$elem.find('.swither__item').height(contentWidth);
+                self.$elem.find('.slider__swither').height(totalHeigt + contentWidth);
+                self.$elem.height(totalHeigt + contentWidth + 40);
 
             } else {
 
-                $(this.elem).find('.swither__item').height(this.options.autoHeight);
+                self.$elem.find('.swither__item').height(this.options.autoHeight);
             }
 
         },
@@ -109,7 +110,7 @@ if (typeof Object.create !== 'function' ) {
         } 
     };
 
-    $.fn.sliderGoods = function( options ) {
+    $.fn.sliderGoods = function (options) {
         return this.each(function() {
             
             var slider = Object.create( Slider );
@@ -119,9 +120,9 @@ if (typeof Object.create !== 'function' ) {
 
     $.fn.sliderGoods.options = {
         caseLimit: 4, //кол-во товаров в витрине
-        butPosition: 'bottom', // позиция кнопок
+        // butPosition: 'bottom', // позиция кнопок
         autoHeight: 'false', // высота всего слайдера
-        desc: 'true', // описание под изображением
+        // desc: 'true', // описание под изображением
         category: 'true', //показ категорий
         spaceSection: 15 //расстояние между секциями
     };

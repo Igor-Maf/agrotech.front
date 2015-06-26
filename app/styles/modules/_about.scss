@@ -6,7 +6,6 @@
 		float: left;
 		margin: 20px;
 	}
-
 	&>p {
 		padding: 10px;
 	}
@@ -16,11 +15,9 @@
 		margin: 20px 0;
 		display: table;
 	}
-
 	@include e('row') {
 		display: table-row;
 	}
-
 	@include m('title') {
 		display: table-cell;
 		padding: 0 20px;
@@ -28,18 +25,4 @@
 		text-align: right;
 		font-family: 'HelveticaNeueCyr Bold';
 	}
-}
-.contact__info {
-
-}
-.contact__row {
-	
-}
-.contact--title {
-	
-}
-.contact--title,
-.contact--title>p {
-	
-
 }
