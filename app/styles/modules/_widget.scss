@@ -1,13 +1,29 @@
 .widget {
 	@extend .padding;
 	@extend .section-default;
-
+	i {
+			border-radius: 5px;
+			border: 2px solid $middle-blue;
+			background-color: #fff;
+			font-size: 1.2em;
+			padding: 2px 4px;
+			margin-right: 5px;
+			vertical-align: top;
+		}
+		@include e('home') {
+			strong {
+				display: inline-block;
+				width: 215px;
+			}
+		}
 	@include e('title') {
 		border-bottom: 1px dashed $light-blue;
 		padding-bottom: 5px;
 		margin-bottom: 10px;
 	}
-
+	@include e('content') {
+			line-height: 1.7em;
+	}
 	@include e('list') {
 		padding-left: 15px;
 		& > li {

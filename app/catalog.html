@@ -74,21 +74,47 @@
                     <h5 class="widget__title">Товары</h5>
                     <ul class="widget__list">
                         <li class="widget__item">
-                            <a href="#" class="widget__link">
+                            <a href="list.html" class="widget__link">
                                 Зерноочистительные машины <span class="count">(3)</span>
                             </a>
+                            <ul>
+                                <li><a href="list.html">Машина для очистки зерна (1)</a></li>
+                                <li><a href="list.html">Семяочистительные машины (1)</a></li>
+                                <li><a href="list.html">Шелушитель зерна (1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
-                            <a href="#" class="widget__link">Переработка сельскохозяйственной продукции <span>(18)</span></a>
+                            <a href="list.html" class="widget__link">Переработка сельскохозяйственной продукции <span>(18)</span></a>
+                            <ul>
+                                <li><a href="list.html">Оборудования для виноделия(1)</a></li>
+                                <li><a href="list.html">Переработка зерна(16)</a></li>
+                                <li><a href="list.html">Переработка овощей(1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
                             <a href="#" class="widget__link">Производство комбикормов <span>(22)</span></a>
+                            <ul>
+                                <li><a href="list.html">Зернодробилка (5)</a></li>
+                                <li><a href="list.html">Комбикорнмовые установки (5)</a></li>
+                                <li><a href="list.html">Кормоизмельчитель (2)</a></li>
+                                <li><a href="list.html">Кормосмесители (4)</a></li>
+                                <li><a href="list.html">Минизаводы комбикормовые (4)</a></li>
+                                <li><a href="list.html">Молотилка кукрузных початков (2)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
-                            <a href="#" class="widget__link">Разбрасыватели удобрений <span>(1)</span></a>
+                            <a href="list.html" class="widget__link">Разбрасыватели удобрений <span>(1)</span></a>
+                            <ul>
+                                <li><a href="list.html">Разбрасыватель минеральных удобрений (1)</a></li>
+                            </ul>
                         </li>
                         <li class="widget__item">
-                            <a href="#" class="widget__link">Элеваторы <span>(7)</span></a>
+                            <a href="list.html" class="widget__link">Элеваторы <span>(7)</span></a>
+                            <ul>
+                                <li><a href="list.html">Загрузчики (1)</a></li>
+                                <li><a href="list.html">Транспортеры (2)</a></li>
+                                <li><a href="list.html">Элеваторное оборудование (4)</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -287,8 +313,9 @@
                         Повторное (при необходимости) провеивание каждой фракции крупы после рассева от возможных остатков цветочной оболочки мучки.
                     </p>
                 </div>
-                <h5>Популярные товары</h5>
-                <div class="slider2">
+                
+                <div class="slider">
+                <h5 class="slider__title">Популярные товары</h5>
                     <div class="slider__swither">
                         <ul class="slider__wrapper">
                             <li data-descr="content__item--1" class="swither__item active">
@@ -433,7 +460,7 @@
     <!-- endbuild -->
 
     <script>
-        $('.slider2').sliderGoods({
+        $('.slider').sliderGoods({
             caseLimit: 5,
             category: 'true',
             autoHeight: 'true',

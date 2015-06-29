@@ -1,15 +1,19 @@
-.slider2,
 .slider {
     @extend .section-default;
     background-color: $clr-white;
     height: 230px;
     position: relative;
     text-align: center;
-        @include e('element') {
-            border-radius: 5px;
-            border: 1px solid $light-blue;
-            margin: 20px;
-            padding: 10px;
+    margin-bottom: 1em;
+        // @include e('element') {
+        //     border-radius: 5px;
+        //     border: 1px solid $light-blue;
+        //     margin: 20px;
+        //     padding: 10px;
+        // }
+        @include e('title') {
+            text-align: left;
+            padding: 10px 20px 0;
         }
         @include e('wrapper') {
             position: absolute;

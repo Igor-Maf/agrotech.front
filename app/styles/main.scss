@@ -125,14 +125,14 @@ textarea:focus {
 }
 .contact-form button {
     @extend textarea;
-    background-color: $middle-blue;
+    background-color: $clr-blue;
     color: $clr-white;
     font-size: 1.2em;
     &:focus {
-        background-color: $clr-white;
-        color: $middle-blue;
+        background-color: $clr-dark-blue;
+        box-shadow: 0 0 0 0;
     }
 }
 .widget i {
-    color: $clr-dark-blue;
+    color: $middle-blue;
 }

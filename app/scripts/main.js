@@ -45,6 +45,7 @@ if (typeof Object.create !== 'function') {
             var self = this,
                 totalWidth = 0,
                 totalHeigt = 0,
+                totalTitle = 0,
                 category = self.$elem.find('.category'),
                 section = $(self.elem).outerWidth() - 40,
                 contentWidth = section / this.options.caseLimit - this.options.spaceSection * 2;
@@ -62,7 +63,15 @@ if (typeof Object.create !== 'function') {
                                     totalWidth = totalWidth + $(this).outerWidth(true);
                                 });
 
-            if ( this.options.category === 'false' ) {
+            if ( this.options.title) {
+                totalTitle += self.$elem.find('.slider__title').outerHeight();
+                console.log(self.$elem.find('.slider__title').outerHeight());
+                
+            } else {
+                self.$elem.find('.slider__title').hide();
+            }
+
+            if ( !this.options.category ) {
                 category.hide();
             } else {
                 totalHeigt += category.outerHeight();
@@ -80,7 +89,7 @@ if (typeof Object.create !== 'function') {
             if (this.options.autoHeight === 'true') {
                 self.$elem.find('.swither__item').height(contentWidth);
                 self.$elem.find('.slider__swither').height(totalHeigt + contentWidth);
-                self.$elem.height(totalHeigt + contentWidth + 40);
+                self.$elem.height(totalHeigt + contentWidth + 40 + totalTitle);
             } else {
                 self.$elem.find('.swither__item').height(this.options.autoHeight);
             }
@@ -120,6 +129,7 @@ if (typeof Object.create !== 'function') {
     };   
 
     $.fn.sliderGoods.options = {
+        title: true, //заголовок слайдера
         caseLimit: 4, //кол-во товаров в витрине
         // butPosition: 'bottom', // позиция кнопок
         autoHeight: 'false', // высота всего слайдера

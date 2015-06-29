@@ -3,10 +3,9 @@
 ================================*/
 .grid {
 	@include m('catalog') {
-		@extend .section-default;
 		padding: 10px;
-		box-sizing: border-box;
 	}
+
 }
 .content-img {
 	border-radius: 5px;
@@ -14,17 +13,26 @@
 	padding: 10px;
 }
 .content {
+	@include e('grid') {
+		@extend .section-default;
+		padding: 10px;
+		box-sizing: border-box;
+		h2 {
+			padding: 0 20px;
+		}
+	}
 	@include e('section') {
 		@extend .inline-block-vbottom;
 		height: 270px;
 		margin: 10px;
-		padding-top: 10px;
+		padding: 10px 10px 0 10px;
 		text-align: center;
-		width: 189px;
+		width: 26%;
 		&:hover {
 			border-radius: 5px;
 			box-shadow: 0 1px 7px 0 $clr-blue;
 			cursor: pointer;
+			text-decoration: none;
 		}
 	}
 	@include e('img') {
@@ -32,16 +40,18 @@
 		height: 150px;
 		line-height: 17em;
 		margin: 0 auto;
-		width: 150px;
+		// width: 150px;
 
-		img {
-			max-height: 150px;
-			max-width: 150px;
-		}
+		// img {
+		// 	max-height: 150px;
+		// 	max-width: 150px;
+		// }
 	}
 
 	@include e('list') {
+		@extend .section-default;
 		@extend .grid--catalog;
+
 	}
 	@include e('list>ul') {
 		margin-bottom: 20px;
@@ -102,4 +112,11 @@
 	@include m('all') {
 		font-size: .7em;
 	}
+}
+
+.content__block {
+	@extend .section-default;
+		padding: 20px;
+		box-sizing: border-box;
+		margin-bottom: 1em;
 }
