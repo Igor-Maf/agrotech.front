@@ -62,16 +62,18 @@
 	@extend .section-simple;
 	border-bottom: 3px solid $middle-blue;
 }
+
 .cost {
     @extend .section-simple;
-        background-color: $bg-middle-blue;
-        color: $middle-blue;
-        font: 1.1em/3em 'HelveticaNeueCyr Bold';
-        padding: 5px 10px;
-}
-.cost--invert {
-    @extend .cost;
+    background-color: $bg-middle-blue;
+    color: $middle-blue;
+    font: 1.1em/3em 'HelveticaNeueCyr Bold', sans-serif;
+    padding: 5px 10px;
+
+    @include m('invert') {
+    	@extend .cost;
         color: $clr-white;
         background-color: $middle-blue;
         border-color: $middle-blue;
+    }
 }

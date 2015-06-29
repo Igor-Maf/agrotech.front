@@ -62,9 +62,9 @@ if (typeof Object.create !== 'function') {
                                     totalWidth = totalWidth + $(this).outerWidth(true);
                                 });
 
-            if ( this.options.category === 'false'){
+            if ( this.options.category === 'false' ) {
                 category.hide();
-             } else {
+            } else {
                 totalHeigt += category.outerHeight();
             }
 
@@ -78,13 +78,10 @@ if (typeof Object.create !== 'function') {
             self.$elem.find('.swither__item:first').addClass('swither__item--edge');
 
             if (this.options.autoHeight === 'true') {
-
                 self.$elem.find('.swither__item').height(contentWidth);
                 self.$elem.find('.slider__swither').height(totalHeigt + contentWidth);
                 self.$elem.height(totalHeigt + contentWidth + 40);
-
             } else {
-
                 self.$elem.find('.swither__item').height(this.options.autoHeight);
             }
 
@@ -118,7 +115,7 @@ if (typeof Object.create !== 'function') {
         return this.each(function() {
             
             var slider = Object.create( Slider );
-            slider.init( options, this);
+            slider.init( options, this );
         });
     };   
 
@@ -176,11 +173,9 @@ if (typeof Object.create !== 'function') {
     $('.widget__item>a').on('click', function(e){
         e.preventDefault();
 
-        if ($(this).parent().hasClass('open')) {
-            $(this).parent().removeClass('open').children('ul').slideUp(200);
-        } else {
-            $(this).parent().addClass('open').children('ul').slideDown(200);
-        }
+        ($(this).parent().hasClass('open')) 
+            ? $(this).parent().removeClass('open').children('ul').slideUp(200)
+            : $(this).parent().addClass('open').children('ul').slideDown(200);
 
     });
 

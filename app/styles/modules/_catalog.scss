@@ -1,13 +1,13 @@
 .catalog {
     @extend .section-default;
     padding: 20px;
-    & >ul {
+    & > ul {
         height: 30px; 
     }
-    & h5 {
+    h5 {
        padding-bottom: 20px; 
     }
-    & >img {
+    img {
         @extend .desc;
     }
 }
@@ -15,7 +15,7 @@
 .desc {
     @extend .inline-block-vcenter;
     padding: 0 20px;
-    & p {
+    p {
         color: $clr-gray-m;
     }
     @include e('cost') {
@@ -28,18 +28,22 @@
     @extend .tabs;
     margin-bottom: 20px;
 
-    @include e('feature table') {
-        margin: 30px 0; 
-        width: 620px;
-        text-align: center;
-        font-size: .9em;
+    @include e('feature') {
+        table {
+            margin: 30px 0; 
+            width: 620px;
+            text-align: center;
+            font-size: .9em;
+        }
     }
 
-    @include e('feature td') {
-        border: 2px solid $light-blue;
-        max-width: 120px;
-        padding: 3px 7px;
-        vertical-align: middle;
+    @include e('feature') {
+        td {
+            border: 2px solid $light-blue;
+            max-width: 120px;
+            padding: 3px 7px;
+            vertical-align: middle;
+        }
     }
 
     @include e('link') {
@@ -49,7 +53,7 @@
         padding: 10px;
         text-decoration: none;
         border: 1px solid $clr-gray;
-        border-bottom: none;
+        border-bottom: 0;
         border-radius: 10px 10px 0 0;
 
         &:hover {
@@ -60,23 +64,23 @@
         &:focus {
             @extend .tab__link:hover;
         }
-    }
-
-    @include e('link.active') {
-        color: $clr-blue;
-        border: 1px solid $clr-blue;
-        border-bottom: 1px solid $clr-white;
-        border-radius: 10px 10px 0 0;
-        background-color: $clr-white;
-        z-index: 10;
+        &.active {
+            color: $clr-blue;
+            border: 1px solid $clr-blue;
+            border-bottom: 1px solid $clr-white;
+            border-radius: 10px 10px 0 0;
+            background-color: $clr-white;
+            z-index: 10;
+        }
     }
 
     @include e('desc li:before') {
         font-family: 'FontAwesome';
         content: "\f178";
     }
-    & ul,
-    & p {
+
+    ul,
+    p {
         padding: 20px;
     }
 }
@@ -97,6 +101,6 @@
     border-bottom: 1px solid $clr-blue;
 }
 .td__title {
-    font-family: 'HelveticaNeueCyr Bold';
+    font-family: 'HelveticaNeueCyr Bold', sans-serif;
     background-color: $bg-slight-blue;
 }

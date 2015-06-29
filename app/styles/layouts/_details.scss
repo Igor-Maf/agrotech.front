@@ -2,20 +2,20 @@
 	display: inline-block;
 	color: $clr-blue;
 	
-	&>a {
+	& > a {
 		border-radius: 5px;
 		border: 2px solid #333;
 		border-color: inherit;
 		color: inherit;
 		font-size: .8em;
 		padding: 1px 10px;
-		font-family: 'HelveticaNeueCyr Bold';
+		font-family: 'HelveticaNeueCyr Bold', sans-serif;
 	}
 
-	&>a:hover {
+	& > a:hover {
 		text-decoration: none;
 		color: inherit;
-		box-shadow: 0px 0px 3px 0px;
+		box-shadow: 0 0 3px;
 	}
 
 	@include m('cat1') {
@@ -27,17 +27,16 @@
 	}
 
 	@include m('cat3') {
-	color: $clr-red-lt;
+		color: $clr-red-lt;
 	}
 
 	@include m('cat4') {
-	color: $clr-blue-lt;
+		color: $clr-blue-lt;
 	}
 
 	@include m('cat5') {
-	color: $clr-gray-m;
+		color: $clr-gray-m;
 	}
-	
 }
 
 .copyright {
@@ -49,7 +48,7 @@
 	text-align: center;
 	display: inline-block;
 	width: 80%;
-	& li {
+	li {
 		display: inline-block;
 		width: 20%;
 	}

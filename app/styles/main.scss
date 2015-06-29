@@ -112,6 +112,7 @@ textarea:focus {
     outline: none;
 }
 
+
 /* ==============================================
                     UNIQUES
  ============================================== */
@@ -123,7 +124,7 @@ textarea:focus {
     width: 980px;
 }
 .contact-form button {
-   @extend textarea;
+    @extend textarea;
     background-color: $middle-blue;
     color: $clr-white;
     font-size: 1.2em;
@@ -135,4 +136,3 @@ textarea:focus {
 .widget i {
     color: $clr-dark-blue;
 }
-

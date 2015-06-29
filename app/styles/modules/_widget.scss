@@ -10,17 +10,17 @@
 
 	@include e('list') {
 		padding-left: 15px;
-		& >li {
+		& > li {
 			text-indent: -1.1em;
-		}
-		& >li:before {
-			color: $clr-blue;
-			content: "\f196";
-			cursor: pointer;
-			font-family: 'FontAwesome';
-		}
-		& >li.open:before {
-			content: "\f147";
+			&:before {
+				color: $clr-blue;
+				content: "\f196";
+				cursor: pointer;
+				font-family: 'FontAwesome';
+			}
+			&.open:before {
+				content: "\f147";
+			}
 		}
 		& li li {
 			padding-left: 10px;
@@ -32,7 +32,7 @@
 
 	@include e('item') {
 		margin-bottom: .5em;
-		& >a {
+		& > a {
 			padding-left: 25px;
 			margin-left: -25px;
 			font-family: 'HelveticaNeueCyr Bold';

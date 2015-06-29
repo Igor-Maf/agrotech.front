@@ -33,11 +33,13 @@
 		line-height: 17em;
 		margin: 0 auto;
 		width: 150px;
+
+		img {
+			max-height: 150px;
+			max-width: 150px;
+		}
 	}
-	@include e('img img') {
-		max-height: 150px;
-		max-width: 150px;
-	}
+
 	@include e('list') {
 		@extend .grid--catalog;
 	}
@@ -67,34 +69,31 @@
 			float: right;
 		}
 	}
-	@include e('desc p') {
-		line-height: 1.2em;
-		font-size: .8em;
-		padding: 8px 0;
+	@include e('desc') {
+		p {
+			line-height: 1.2em;
+			font-size: .8em;
+			padding: 8px 0;
+		}
 	}
 	@include m('title') {
-		font-family: 'HelveticaNeueCyr Bold';
+		font-family: 'HelveticaNeueCyr Bold', sans-serif;
 	}
 }
 .paginator {
 	text-align: center;
-	& li {
-		@extend .inline-block;
-		vertical-align: top;
+	li {
+		@extend .inline-block-vtop;
 	}
-	& li:hover,
+	li:hover,
 	.pag--active {
 		background-color: $bg-middle-blue;
 	}
-	& a {
+	a {
 		padding: 2px 5px;
 	}
 }
 
-.pag--active,
-.paginator li:hover {
-	
-}
 .pag {
 	@include e('first') {}
 	@include e('next') {}
