@@ -118,6 +118,7 @@ td {
     vertical-align: middle;
 }
 table {
+    text-align: center;
     width: 100%;
 }
 
@@ -137,11 +138,10 @@ table {
     background-color: $clr-blue;
     color: $clr-white;
     font-size: 1.2em;
+
     &:focus {
         background-color: $clr-dark-blue;
         box-shadow: 0 0 0 0;
     }
 }
-.widget i {
-    color: $middle-blue;
-}
+

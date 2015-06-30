@@ -50,19 +50,15 @@
 .margin-bottom {
 	margin-bottom: 1rem;
 }
-
-
 .section-simple {
 	background: $clr-white;
 	border: 1px solid $light-blue;
 	border-radius: 10px;
 }
-
 .section-default {
 	@extend .section-simple;
 	border-bottom: 3px solid $middle-blue;
 }
-
 .cost {
     @extend .section-simple;
     background-color: $bg-middle-blue;
@@ -72,9 +68,9 @@
 
     @include m('invert') {
     	@extend .cost;
-        color: $clr-white;
         background-color: $middle-blue;
         border-color: $middle-blue;
+        color: $clr-white;
     }
      @include m('big') {
 		line-height: 2em;
@@ -85,6 +81,6 @@
 }
 .title-line {
 	background-color: $bg-middle-blue;
-	padding: 0 15px;
 	display: block;
+	padding: 0 15px;
 }

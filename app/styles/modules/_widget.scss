@@ -1,65 +1,77 @@
 .widget {
 	@extend .padding;
 	@extend .section-default;
+
 	i {
-			border-radius: 5px;
-			border: 2px solid $middle-blue;
-			background-color: #fff;
-			font-size: 1.2em;
-			padding: 2px 4px;
-			margin-right: 5px;
-			vertical-align: top;
+		border-radius: 5px;
+		border: 2px solid $middle-blue;
+		color: $middle-blue;
+		font-size: 1.2em;
+		padding: 2px 4px;
+		margin-right: 5px;
+		vertical-align: top;
+	}
+
+	@include e('home') {
+		strong {
+			display: inline-block;
+			width: 215px;
 		}
-		@include e('home') {
-			strong {
-				display: inline-block;
-				width: 215px;
-			}
-		}
+	}
+
 	@include e('title') {
 		border-bottom: 1px dashed $light-blue;
 		padding-bottom: 5px;
 		margin-bottom: 10px;
 	}
+
 	@include e('content') {
 			line-height: 1.7em;
 	}
+
 	@include e('list') {
 		padding-left: 15px;
+
 		& > li {
 			text-indent: -1.1em;
+
 			&:before {
 				color: $clr-blue;
 				content: "\f196";
 				cursor: pointer;
 				font-family: 'FontAwesome';
 			}
+
 			&.open:before {
 				content: "\f147";
 			}
 		}
+
 		& li li {
-			padding-left: 10px;
 			font-size: .9em;
-			text-indent: 0;
 			line-height: 2.5em;
+			padding-left: 10px;
+			text-indent: 0;
 		}
 	}
 
 	@include e('item') {
 		margin-bottom: .5em;
+
 		& > a {
-			padding-left: 25px;
-			margin-left: -25px;
-			font-family: 'HelveticaNeueCyr Bold';
+			font-family: 'HelveticaNeueCyr Bold', sans-serif;
 			font-size: .9em;
 			line-height: 1em;
+			margin-left: -25px;
+			padding-left: 25px;
 		}
 	}
+
 	&:not(:first-child) {
 		margin-top: 1em;
 	}
 }
+
 .contact-form__row {
 	padding: 5px 0;
 }

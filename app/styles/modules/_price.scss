@@ -1,19 +1,22 @@
 .price {
 	.td {
-		@include m('name') {}
+		@include m('name') {
+			text-align: left;
+		}
+
 		@include m('category') {
 			width: 18%;
-			text-align: center;
 		}
+
 		@include m('amout') {
 			width: 12%;
-			text-align: center;
 		}
+
 		@include m('cost') {
 			width: 10%;
-			text-align: center;
 		}
 	}
+	
 	tr {
 		&:hover {
 			background-color: #D9F2F9;

@@ -1,5 +1,6 @@
 .page {
 	@extend .vertical-padding;
+	
 	@include m('left-aside') {
 		.sidebar,
 		.content {

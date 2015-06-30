@@ -2,27 +2,31 @@
 	@extend .section-default;
 	padding: 20px;
 
-	& img {
+	img {
 		float: left;
 		margin: 20px;
 	}
+
 	&>p {
 		padding: 10px;
 	}
 }
 .contact {
+
 	@include e('info') {
 		margin: 20px 0;
 		display: table;
 	}
+
 	@include e('row') {
 		display: table-row;
 	}
+
 	@include m('title') {
 		display: table-cell;
-		padding: 0 20px;
+		font-family: 'HelveticaNeueCyr Bold', sans-serif;
 		min-width: 150px;
+		padding: 0 20px;
 		text-align: right;
-		font-family: 'HelveticaNeueCyr Bold';
 	}
 }
