@@ -16,6 +16,7 @@
     p {
         color: $clr-gray-m;
     }
+    
     @include e('cost') {
         @extend .cost--invert;
         font-size: 1.2em    
@@ -28,10 +29,10 @@
 
     @include e('feature') {
         table {
-            margin: 30px 0; 
-            width: 620px;
-            text-align: center;
             font-size: .9em;
+            margin: 30px 0; 
+            text-align: center;
+            width: 620px;
         }
     }
 
@@ -43,14 +44,14 @@
     }
 
     @include e('link') {
+        border-radius: 10px 10px 0 0;
+        border: 1px solid $clr-gray;
+        border-bottom: 0;
         color: $clr-gray;
         float: left;
         font-size: 1.1em;
         padding: 10px;
         text-decoration: none;
-        border: 1px solid $clr-gray;
-        border-bottom: 0;
-        border-radius: 10px 10px 0 0;
 
         &:hover {
             color: $clr-gray;
@@ -60,12 +61,13 @@
         &:focus {
             @extend .tab__link:hover;
         }
+        
         &.active {
-            color: $clr-blue;
+            background-color: $clr-white;
+            border-radius: 10px 10px 0 0;
             border: 1px solid $clr-blue;
             border-bottom: 1px solid $clr-white;
-            border-radius: 10px 10px 0 0;
-            background-color: $clr-white;
+            color: $clr-blue;
             z-index: 10;
         }
     }
@@ -92,12 +94,12 @@
     cursor: pointer;
 }
 .tabs {
-    display: block;
-    padding-bottom: 43px;
     border-bottom: 1px solid $clr-blue;
+    display: block;
     margin-top: 30px;
+    padding-bottom: 43px;
 }
 .td__title {
-    font-family: 'HelveticaNeueCyr Bold', sans-serif;
     background-color: $bg-slight-blue;
+    font-family: 'HelveticaNeueCyr Bold', sans-serif;
 }
