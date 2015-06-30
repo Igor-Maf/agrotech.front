@@ -60,11 +60,8 @@
                 <ul class="navbar">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Товары</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Статьи</a></li>
-                    <li><a href="#">Прайс-листы</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="list.html">Прайс-листы</a></li>
+                    <li><a href="about.html">Контакты</a></li>
                 </ul>
             </nav>
 
@@ -126,9 +123,16 @@
                     <p class="widget__content">
                         <i class="fa fa-phone"></i>
                         <strong>+380 (512) 50-88-01</strong>
-                        <hr />
+                    </p>
+                    <hr />
+                    <p class="widget__home">
                         <i class="fa fa-home"></i> 
-                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                        <strong>Украина, 54055, Николаевская область, <br>г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                    <hr />
+                    <p class="widget__e-mail">
+                        <i class="fa fa-envelope-o"></i>
+                         <strong><a href="mailto:smaple@mail.com" class="info__link">smaple<strong>@</strong>mail.com</a></strong>
                     </p>
                 </div>
 
@@ -144,7 +148,12 @@
 
                         <fieldset class="contact-form__row">
                             <label for="phone">Телефон<span class="required"></span></label>
-                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-_____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                        </fieldset>
+
+                        <fieldset class="contact-form__row">
+                            <label for="email">E-mail<span class="required"></span></label>
+                            <input type="email" id="email" name="email" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"/>
                         </fieldset>
 
                          <fieldset class="contact-form__row">
@@ -160,108 +169,119 @@
             <section class="content">
 
                 <section class="content__list">
-                <h3>Каталог товаров</h3>
+                <h3>Категория: <span class="category category--cat1"><a href="#">дробилки</a></span></h3>
                     <ul>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
                                 <span class="category category--cat1"><a href="#">дробилки</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
                             </div>
                         </li>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
-                                    <span class="category category--cat2"><a href="#">транспортеры</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
+                                <span class="category category--cat1"><a href="#">дробилки</a></span>
                             </div>
                         </li>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
-                                    <span class="category category--cat3"><a href="#">элеваторы</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
+                                <span class="category category--cat1"><a href="#">дробилки</a></span>
                             </div>
                         </li>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
-                                    <span class="category category--cat4"><a href="#">загрузчики</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
+                                <span class="category category--cat1"><a href="#">дробилки</a></span>
                             </div>
                         </li>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
-                                    <span class="category"><a href="#">дробилки</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
+                                <span class="category category--cat1"><a href="#">дробилки</a></span>
                             </div>
                         </li>
                         <li>
                             <div class="list__section">
-                                <div class="list__img">
-                                    <img src="./images/catalog_img03.JPG" alt="фермер">
-                                </div>
-                                <div class="list__desc">
-                                    <span class="category category--cat5"><a href="#">дробилки</a></span>
-                                    <a class="list--title" href="#">Крупоруша</a>
-                                    <p>
-                                        Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
-                                    </p>
-                                    <strong>цена: 23000 грн</strong>
-                                </div>
+                                <a href="catalog.html">
+                                    <div class="list__img">
+                                        <img src="./images/catalog_img03.jpg" alt="фермер">
+                                    </div>
+                                    <div class="list__desc">
+                                        <span class="list--title">Крупоруша</span>
+                                        <p>
+                                            Крупа: Производительность кг/ч по сырью до: Фермер 2 Фермер 2а Фермер 3 Фермер 4 Фермер 5 Пшеничная 175 250 250 350 525 Ячневая 105 160 160 225 345 Кукурузная 305 425 425 595 875 К-во фракций 2 2 3 – 4 4 – 4 5 – 4  Выход   готового продукта 80-85 %... 
+                                        </p>
+                                        <div class="cost__wrap"><strong class="cost cost--big">23000 грн</strong></div>
+                                    </div>
+                                </a>
+                                <span class="category category--cat1"><a href="#">дробилки</a></span>
                             </div>
-                        </li>
-                        
+                        </li> 
                     </ul>
                     <div class="paginator">
                         <ul>
-                            <li class="pag__first pag--all">
+                            <li class="pag__first pag--all pag--unactive">
                                 <a href="#">
                                     <i class="fa fa-fast-backward"></i>
                                 </a>
                             </li>
-                            <li class="pag__prev">
+                            <li class="pag__prev pag--unactive">
                                 <a href="#">
                                     <i class="fa fa-caret-left"></i>
                                 </a>
@@ -289,6 +309,12 @@
 
         <footer>
             <p class="copyright">Сайт создан <a href="http://one-team.net.ua">One-Team</a></p>
+            <ul class="site-map">
+                <li><a href="#">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="list.html">Товары</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
         </footer>
         <div class=""></div>
     </div>

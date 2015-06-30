@@ -76,4 +76,15 @@
         background-color: $middle-blue;
         border-color: $middle-blue;
     }
+     @include m('big') {
+		line-height: 2em;
+     }
+    @include e('wrap') {
+    	text-align: right;
+    }
+}
+.title-line {
+	background-color: $bg-middle-blue;
+	padding: 0 15px;
+	display: block;
 }

@@ -56,16 +56,13 @@
         </header>
         <!-- end: header -->
         <nav>
-                <ul class="navbar">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Товары</a></li>
-                    <li><a href="list.html">Услуги</a></li>
-                    <li><a href="#">Статьи</a></li>
-                    <li><a href="#">Прайс-листы</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+            <ul class="navbar">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Товары</a></li>
+                <li><a href="list.html">Прайс-листы</a></li>
+                <li><a href="about.html">Контакты</a></li>
+            </ul>
+        </nav>
 
         <article class="page page--left-aside">
             <!-- start: sidebar -->
@@ -124,9 +121,16 @@
                     <p class="widget__content">
                         <i class="fa fa-phone"></i>
                         <strong>+380 (512) 50-88-01</strong>
-                        <hr />
+                    </p>
+                    <hr />
+                    <p class="widget__home">
                         <i class="fa fa-home"></i> 
-                        <strong>Украина, 54055, Николаевская область, г. Николаев, ул. Мельничная 23/3</strong>
+                        <strong>Украина, 54055, Николаевская область, <br>г. Николаев, ул. Мельничная 23/3</strong>
+                    </p>
+                    <hr />
+                    <p class="widget__e-mail">
+                        <i class="fa fa-envelope-o"></i>
+                         <strong><a href="mailto:smaple@mail.com" class="info__link">smaple<strong>@</strong>mail.com</a></strong>
                     </p>
                 </div>
 
@@ -142,7 +146,12 @@
 
                         <fieldset class="contact-form__row">
                             <label for="phone">Телефон<span class="required"></span></label>
-                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                            <input type="phone" id="phone" name="phone" placeholder="+__(___)__-_____" required pattern="^+\d{3}-\d{3}-\d{4}$"/>
+                        </fieldset>
+
+                        <fieldset class="contact-form__row">
+                            <label for="email">E-mail<span class="required"></span></label>
+                            <input type="email" id="email" name="email" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"/>
                         </fieldset>
 
                          <fieldset class="contact-form__row">
@@ -157,27 +166,30 @@
 
             <section class="content">
                 <section class="catalog">
-                <h5>Крупоцеха - крупорушки Фермер</h5>
-                <img src="images/catalog_img01.JPG" alt="img01">
-                <div class="desc">
-                    
-                    <p>Категория: <span class="category category--cat1"><a href="#">дробилки</a></span><br>
-                    Тип: розница и опт <br>
-                        Наличие: <span class="color--green">в наличии</span><br>
-                        Телефон: <span class="phone__hide bold">показать телефон</span><br>
-                    </p>
-                    <span class="desc__cost">14000.00 грн</span>
-                </div>
-                <ul class="tabs">
-                    <li><a class="tab__link  active" data-tab="tab__desc" href="#">описание</a></li>
-                    <li> <a class="tab__link" data-tab="tab__feature" href="#">характеристика</a></li>
-                    <li> <a class="tab__link" data-tab="tab__other" href="#">дополнительно</a></li>
-                </ul>
-                
+                    <div class="goods__wrap">
+                        <h5>Крупоцеха - крупорушки Фермер</h5>
+                        <img src="images/catalog_img01.jpg" alt="img01">
+                        <div class="desc">
+
+                            <p>Категория: <span class="category category--cat1"><a href="list.html">дробилки</a></span><br>
+                                Тип: розница и опт <br>
+                                Наличие: <span class="color--green">в наличии</span><br>
+                                Телефон: <a class="phone__hide bold">показать телефон</a><br>
+                            </p>
+
+                            <span class="desc__cost">14000.00 грн</span>
+                        </div>
+                        <ul class="tabs">
+                            <li><a class="tab__link  active" data-tab="tab__desc" href="#">описание</a></li>
+                            <li> <a class="tab__link" data-tab="tab__feature" href="#">характеристика</a></li>
+                            <li> <a class="tab__link" data-tab="tab__other" href="#">дополнительно</a></li>
+                        </ul>
+                    </div>
                
                 <div class="tab tab__desc">
                     <p>
                         Оригинальность конструкции обеспечивает:
+                    </p>
                         <ul>
                             <li>
                                  Значительное снижение его стоимости по сравнению с другими конструкциями
@@ -195,7 +207,7 @@
                                  Не обязательно производить предварительное снятие цветочной оболочки ячменя и пшеницы на шелушильно-шлифовочной машине т.к. частично процесс шелушения зерна происходит одновременно с его измельчением, штифтами, в ситовом цилиндре.
                             </li>
                         </ul>      
-                     </p>
+                     
                     </div>
                     <div class="tab tab__feature">
                         <table>
@@ -302,47 +314,51 @@
                         Влажность зерна перед переработкой – 14% <br>
                         Окупаемость оборудования – 4 мес <br>
                     </p>
-                    <p>
-                        <span class="bold">Технологические операции:</span><br>
-                        <strong>Фермер 2, Фермер 2а, Фермер 3, Фермер 4, Фермер 5:</strong><br>
-                        Измельчение зерна до размеров не превышаюшающих диаметр отверстий в установленном сменном сите измельчителя. <br>
+                    
+                        <strong>Технологические операции:</strong><br>
+                        <strong class="title-line">Фермер 2, Фермер 2а, Фермер 3, Фермер 4, Фермер 5:</strong>
+                        <p>Измельчение зерна до размеров не превышаюшающих диаметр отверстий в установленном сменном сите измельчителя. <br>
                         Отбор мучки и цветочной оболочки от круп в аспирационом канал сразу после измельчения до разделения на фракции. <br>
-                        Сбор цветочной оболочки и мучки в циклон с помощью ц/б вентелятора. <br>
-                        <strong>Фермер 2, 2а:</strong> Удаление мучки от крупы на неподвижном сите площадью S=0,07m2; <br>
-                        <strong>Фермер 3, 4, 5:</strong> Разделение круп на 4 фракции с помощью трехситового  вибрационного рассева S=1.5-2,3 m2; <br>
-                        Повторное (при необходимости) провеивание каждой фракции крупы после рассева от возможных остатков цветочной оболочки мучки.
-                    </p>
+                        Сбор цветочной оболочки и мучки в циклон с помощью ц/б вентелятора. </p>
+                        <strong class="title-line">Фермер 2, 2а:</strong> 
+                        <p>Удаление мучки от крупы на неподвижном сите площадью S=0,07m2; </p>
+                        <strong class="title-line">Фермер 3, 4, 5:</strong> 
+                        <p>
+                            Разделение круп на 4 фракции с помощью трехситового  вибрационного рассева S=1.5-2,3 m2; <br>
+                            Повторное (при необходимости) провеивание каждой фракции крупы после рассева от возможных остатков цветочной оболочки мучки.
+                        </p>
+                    
                 </div>
                 
                 <div class="slider">
-                <h5 class="slider__title">Популярные товары</h5>
+                <h5 class="slider__title">Похожие товары</h5>
                     <div class="slider__swither">
                         <ul class="slider__wrapper">
                             <li data-descr="content__item--1" class="swither__item active">
                                 <span class="category category--cat1"><a href="#">дробилки</a></span>
                                 <a href="#">
-                                    <img src="./images/catalog_img01.JPG" alt="image">
+                                    <img src="./images/catalog_img01.jpg" alt="image">
                                     <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                                 </a>
                             </li>
                             <li data-descr="content__item--1" class="swither__item">
                                 <span class="category category--cat2"><a href="#">дробилки</a></span>
                                 <a href="#">
-                                    <img src="./images/catalog_img03.JPG" alt="image">
+                                    <img src="./images/catalog_img03.jpg" alt="image">
                                     <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                                 </a>
                             </li>
                             <li data-descr="content__item--2" class="swither__item">
                                 <span class="category category--cat3"><a href="#">дробилки</a></span>
                                 <a href="#">
-                                    <img src="./images/catalog_img04.JPG" alt="image">
+                                    <img src="./images/catalog_img04.jpg" alt="image">
                                     <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                                 </a>
                             </li>
                             <li data-descr="content__item--3" class="swither__item">
                             <span class="category category--cat4"><a href="#">сеялки</a></span>
                                 <a href="#">
-                                    <img src="./images/catalog_img05.JPG" alt="image">
+                                    <img src="./images/catalog_img05.jpg" alt="image">
                                     <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                                 </a>
                             </li>
@@ -350,70 +366,70 @@
                                 <span class="category category--cat5"><a href="#">веялки</a></span>
                             </a>
                             <a href="#">
-                                <img src="./images/catalog_img06.JPG" alt="image">
+                                <img src="./images/catalog_img06.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--5" class="swither__item">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img07.JPG" alt="image">
+                                <img src="./images/catalog_img07.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--6" class="swither__item">
                             <span class="category category--cat2"><a href="#">измельчители</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img09.JPG" alt="image">
+                                <img src="./images/catalog_img09.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--1" class="swither__item active">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img01.JPG" alt="image">
+                                <img src="./images/catalog_img01.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--1" class="swither__item">
                             <span class="category category--cat1"><a href="#">транспортеры</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img03.JPG" alt="image">
+                                <img src="./images/catalog_img03.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--2" class="swither__item">
                             <span class="category category--cat3"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img04.JPG" alt="image">
+                                <img src="./images/catalog_img04.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--3" class="swither__item">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img05.JPG" alt="image">
+                                <img src="./images/catalog_img05.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--4" class="swither__item">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img06.JPG" alt="image">
+                                <img src="./images/catalog_img06.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--5" class="swither__item">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img07.JPG" alt="image">
+                                <img src="./images/catalog_img07.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
                         <li data-descr="content__item--6" class="swither__item">
                             <span class="category category--cat1"><a href="#">дробилки</a></span>
                             <a href="#">
-                                <img src="./images/catalog_img09.JPG" alt="image">
+                                <img src="./images/catalog_img09.jpg" alt="image">
                                 <p>Крупоцеха - крупорушки <br> <span class="cost">32500грн</span></p>
                             </a>
                         </li>
@@ -433,6 +449,12 @@
 
         <footer>
             <p class="copyright">Сайт создан <a href="http://one-team.net.ua">One-Team</a></p>
+            <ul class="site-map">
+                <li><a href="#">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="list.html">Товары</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
         </footer>
     </div>
     

@@ -19,6 +19,7 @@
 @import "modules/slider";
 @import "modules/about";
 @import "modules/catalog";
+@import "modules/price";
 
 
 
@@ -110,6 +111,14 @@ input:focus,
 textarea:focus {
     box-shadow: 0 0 8px 0px $middle-blue;   
     outline: none;
+}
+td {
+    border: 1px solid $light-blue;
+    padding: 3px 7px;
+    vertical-align: middle;
+}
+table {
+    width: 100%;
 }
 
 

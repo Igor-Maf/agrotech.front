@@ -51,6 +51,9 @@
 	@include e('list') {
 		@extend .section-default;
 		@extend .grid--catalog;
+		li {
+			position: relative;
+		}
 
 	}
 	@include e('list>ul') {
@@ -65,10 +68,23 @@
 		&:hover {
 			@extend .content__section:hover;
 		}
+		.category {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+		}
+		& >a:focus,
+		& >a:hover,
+		& >a {
+			text-decoration: none;
+			color: #333;
+		}
+
 	}
 	@include e('img') {
 		@extend .content-img;
 		width: 100px;
+		vertical-align: top;
 		display: inline-block;
 	}
 	@include e('desc') {
@@ -78,16 +94,22 @@
 		&>.category {
 			float: right;
 		}
-	}
-	@include e('desc') {
 		p {
-			line-height: 1.2em;
-			font-size: .8em;
-			padding: 8px 0;
+			line-height: 1.4em;
+			font-size: .85em;
+			padding: 8px 0 0;
 		}
 	}
+	// @include e('desc') {
+	// 	p {
+	// 		line-height: 1.2em;
+	// 		font-size: .8em;
+	// 		padding: 8px 0;
+	// 	}
+	// }
 	@include m('title') {
 		font-family: 'HelveticaNeueCyr Bold', sans-serif;
+		color: $middle-blue;
 	}
 }
 .paginator {
@@ -96,11 +118,18 @@
 		@extend .inline-block-vtop;
 	}
 	li:hover,
-	.pag--active {
-		background-color: $bg-middle-blue;
+	.pag--active a {
+		color: $clr-orange;
+		font-family: 'HelveticaNeueCyr Bold', sans-serif;
+	}
+	.pag--unactive a {
+		color: $clr-gray;
 	}
 	a {
 		padding: 2px 5px;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 

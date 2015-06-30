@@ -7,6 +7,7 @@
     img {
         @extend .desc;
     }
+
 }
 
 .desc {
@@ -38,8 +39,6 @@
         td {
             border: 2px solid $light-blue;
             max-width: 120px;
-            padding: 3px 7px;
-            vertical-align: middle;
         }
     }
 
@@ -70,32 +69,33 @@
             z-index: 10;
         }
     }
-
-    @include e('desc li:before') {
-        font-family: 'FontAwesome';
-        content: "\f178";
+    ul {
+        padding: 0 40px;
     }
-
-    ul,
+    li {
+        list-style: disc;
+        padding: 5px 0;
+    }
     p {
-        padding: 20px;
+        padding: 10px 20px;
     }
 }
-
-.tab ul,
-.tab p {
-    
-}
-.color--green {
-    color: $clr-green;
+.color {
+    @include m('green') {
+        color: $clr-green;
+    }
+    @include m('darkblue') {
+        color: $clr-dark-blue;
+    }
 }
 .phone__hide {
     cursor: pointer;
 }
 .tabs {
     display: block;
-    padding-bottom: 13px;
+    padding-bottom: 43px;
     border-bottom: 1px solid $clr-blue;
+    margin-top: 30px;
 }
 .td__title {
     font-family: 'HelveticaNeueCyr Bold', sans-serif;
