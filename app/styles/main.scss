@@ -106,7 +106,7 @@ textarea {
     box-sizing: border-box;
     color: #222;
     padding: 3px 10px;
-    width: 100%;
+    width: 100%;  
 }
 input:focus,
 textarea:focus {
@@ -123,6 +123,18 @@ table {
     width: 100%;
 }
 
+// fix for ie 
+input {
+    height: 36px;
+}
+textarea { 
+    height: 258px;
+    overflow-y: auto; 
+}
+// input[placeholder] {
+//     color: #999
+// }
+
 
 /* ==============================================
                     UNIQUES
@@ -135,11 +147,13 @@ table {
     width: 980px;
 }
 .contact-form button {
-    padding: .4em;
+    // padding: .4em;
     @extend textarea;
     background-color: $clr-blue;
     color: $clr-white;
     font-size: 1.1em;
+    margin-top: .5em;
+    height: 34px;
 
     &:focus {
         background-color: $clr-dark-blue;
