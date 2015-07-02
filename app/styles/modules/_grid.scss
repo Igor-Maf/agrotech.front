@@ -16,6 +16,7 @@
 		@extend .section-default;
 		box-sizing: border-box;
 		padding: 10px;
+
 		h2 {
 			padding: 0 20px;
 		}
@@ -46,8 +47,13 @@
 	@include e('list') {
 		@extend .section-default;
 		@extend .grid--catalog;
+
 		li {
 			position: relative;
+		}
+
+		h3 {
+			padding-left: 10px;
 		}
 
 	}

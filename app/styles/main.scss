@@ -20,6 +20,7 @@
 @import "modules/about";
 @import "modules/catalog";
 @import "modules/price";
+@import "modules/breadcrumbs";
 
 
 
@@ -134,10 +135,11 @@ table {
     width: 980px;
 }
 .contact-form button {
+    padding: .4em;
     @extend textarea;
     background-color: $clr-blue;
     color: $clr-white;
-    font-size: 1.2em;
+    font-size: 1.1em;
 
     &:focus {
         background-color: $clr-dark-blue;

@@ -2,7 +2,7 @@
 	display: inline-block;
 	color: $clr-blue;
 	
-	& > a {
+	a {
 		border-radius: 5px;
 		border: 2px solid #333;
 		border-color: inherit;
@@ -10,12 +10,13 @@
 		font-size: .8em;
 		padding: .2em 10px;
 		font-family: 'HelveticaNeueCyr Bold', sans-serif;
-	}
 
-	& > a:hover {
-		text-decoration: none;
-		color: inherit;
-		box-shadow: 0 0 3px;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: inherit;
+			box-shadow: 0 0 3px;
+		}
 	}
 
 	@include m('cat1') {

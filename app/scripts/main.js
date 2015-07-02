@@ -148,6 +148,8 @@ if (typeof Object.create !== 'function') {
     $('.tab__link').on('click', function( e ) {
         e.preventDefault();
 
+        if ($(this).hasClass('active')) return;
+
         var $this = $(this);
 
         $('.tab__link').removeClass('active');
