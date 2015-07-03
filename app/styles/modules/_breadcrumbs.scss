@@ -1,20 +1,25 @@
 .breadcrumbs {
 	@extend .section-default;
-	margin-bottom: 1em;
+	@extend .margin-bottom;
+	display: inline-block;
 
 	ul {
-		padding: 5px 20px;
+		padding: .5em 20px;
 	}
 
 	li {
 		display: inline-block;
+		font-size: 13px;
+		text-transform: uppercase;
+
 		&:after {
 			font-family: 'FontAwesome';
-			content: '  \f105 ';
+			content: '\f105';
 			color: $clr-blue;
+			margin: 0 7px 0 12px
 		}
 		&:last-child:after {
-			display: none;
+			display: none
 		}
 	}
 }
