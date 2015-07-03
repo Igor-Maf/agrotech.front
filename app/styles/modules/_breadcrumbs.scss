@@ -1,4 +1,11 @@
 .breadcrumbs {
+	@extend .section-default;
+	margin-bottom: 1em;
+
+	ul {
+		padding: 5px 20px;
+	}
+
 	li {
 		display: inline-block;
 		&:after {

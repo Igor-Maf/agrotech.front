@@ -40,6 +40,7 @@
 				content: "\f196";
 				cursor: pointer;
 				font-family: 'FontAwesome';
+				float: left;
 			}
 
 			&.open:before {
@@ -61,8 +62,11 @@
 			font-family: 'HelveticaNeueCyr Bold', sans-serif;
 			font-size: .9em;
 			line-height: 1em;
-			margin-left: -25px;
-			padding-left: 25px;
+			padding-left: 20px;
+
+			.count {
+				margin-right: -5px; //fix for safari
+			}
 		}
 	}
 
